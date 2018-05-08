@@ -23,7 +23,9 @@
  		echo 'Inserted Successfully';
  	}
 	}
+	mysqli_close($con);
 
+	echo "<meta http-equiv='refresh' content='1;url=admin.php'>";
 
 
 
