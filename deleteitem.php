@@ -1,5 +1,7 @@
 <?php
+//echo "<meta http-equiv="Cache-control" content="no-cache">";
 $con=mysqli_connect("localhost","root","virurohan","vrindhavan_db");
+session_start();
 if(!$con){
 	die('not connected');
 }
@@ -7,14 +9,14 @@ $id = $_POST['id'];
 		$sql= "DELETE FROM items WHERE id='$id'";
 if (!mysqli_query($con,$sql))
 	{
- 		echo 'Not Deleted';
+ 		$_SESSION["message"]= 1;
 
 	}
 	else
 	{
- 		echo 'Deleted Successfully';
+ 		$_SESSION["message"]= 2; 
  	}
 mysqli_close($con);
-echo "<meta http-equiv='refresh' content='1;url=admin.php'>";
+echo "<meta http-equiv='refresh' content='0;url=admin.php'>";
 
 ?>

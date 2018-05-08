@@ -4,6 +4,7 @@
 	<title>admin
 	</title>
 	<meta http-equiv="Cache-control" content="no-cache">
+	
 </head>
 <body>
 <div class="addfield">
@@ -23,7 +24,32 @@
 		<button type="submit">submit</button>
 	</form>
 </div>
-<?php
+<?php  
+		session_start();
+		if(isset($_SESSION["message"]))
+		{
+			if($_SESSION["message"]==1)
+			{
+				echo "<script> alert(\"Error in deletion\");</script>";
+			}
+			if($_SESSION["message"]==2)
+			{
+				echo "<script> alert(\"Successfull deletion\");</script>";
+			}
+			if($_SESSION["message"]==3)
+			{
+				echo "<script> alert(\"Image file error... Try again\");</script>";
+			}
+			if($_SESSION["message"]==4)
+			{
+				echo "<script> alert(\"Error in insertion\");</script>";
+			}
+			if($_SESSION["message"]==5)
+			{
+				echo "<script> alert(\"Successfull insertion\");</script>";
+			}
+			unset($_SESSION["message"]);
+		}
         $con=  mysqli_connect("localhost", "root", "virurohan", "vrindhavan_db");
 
         if(!$con)
@@ -56,7 +82,7 @@
              {
                  ?>
             <tr>
-                <td><?php echo $row['item-code']; ?></td>
+                <td><?php echo $row['item_code']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['size']; ?></td>
                 <td><?php echo $row['price'] ;?></td>
@@ -78,14 +104,7 @@
              </table>
             </div>
 <script type="text/javascript">
-	function confirmdelete(id){
-		let x=confirm("are you sure?");
-		if(x)
-		{
-			window.location.href = 'deleteitem.php?id='+id;
-		}
-
-	}
+	
 
 	function showconfirm(){
 		return confirm("are you sure?");
@@ -93,4 +112,3 @@
 </script>
 </body>
 </html>
-<!-- //<td><p  onClick="confirmdelete(<?php// echo $row['id'] ?>);">delete</p></td> -->
