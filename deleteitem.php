@@ -1,5 +1,5 @@
 <?php
-//echo "<meta http-equiv="Cache-control" content="no-cache">";
+
 $con=mysqli_connect("localhost","root","virurohan","vrindhavan_db");
 session_start();
 if(!$con){

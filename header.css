@@ -1,0 +1,114 @@
+*{
+	box-sizing: border-box;
+}
+
+html,body{
+	padding: 10px;
+	margin: 0;
+	
+}
+
+header{
+	/*position: fixed;
+	z-index: 1;*/
+	position: relative;
+	top: 0;
+	height: 160px;
+	width: 100%;
+
+	background-color: white;
+	
+
+}
+.headercontent{
+	position: relative;
+	height: 100%;
+	margin: auto;
+	max-width: 1200px;
+
+	text-align: center;
+	border-bottom: 0.5px solid rgba(45, 49, 145, .5);
+
+}
+
+.homeicon{
+	height:40px;
+	width: 40px;
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	
+	opacity: 0.5;
+	
+}
+
+.logo{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); 
+
+}
+.cartdiv{
+
+	height:40px;
+	width: 100px;
+	position: absolute;
+	top: 10%;
+	right: 0%;
+	
+	opacity: 0.5;
+
+}
+.carticon{
+	height:40px;
+	width: 40px;
+	position: absolute;
+	left: 0;
+	
+
+}
+
+.cartitemsnumber{
+	position: absolute;
+	color: rgb(45,49,145);
+	right: 0;
+
+}
+.cartdiv:hover, .homeicon:hover{
+	opacity: 1;
+}
+
+
+
+.viewcontainer{
+
+	position: relative;
+	margin-top: 10px;
+	border: 2px solid black;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	max-width: 1200px;
+}
+
+.viewimages{
+	
+	
+	width: 50%;
+	position: relative;
+
+}
+
+.viewimage{
+	width: 100%;
+    height: auto;
+    
+
+   float: left;
+	
+	
+}

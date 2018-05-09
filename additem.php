@@ -1,5 +1,5 @@
 <?php
-	//echo "<meta http-equiv="Cache-control" content="no-cache">";
+
 	session_start();
 	$itemcode = $_POST['itemcode'];
 	$description = $_POST['description'];
