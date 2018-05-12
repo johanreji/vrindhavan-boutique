@@ -23,21 +23,23 @@ $id= $_GET['id'];
 <body>
 <header>
 	<div class="headercontent">
-	
-		<img class="homeicon" src="images/home.png">
-	
-	
+		<div class="searchdiv">
+		<form method="get">
+		<input class="searchbar" type="text" name="search" placeholder="What do you want to find?">
+		<button class="searchbtn" type="submit"><img class="searchicon" src="images/search.png"></button>
+		</form>
+		</div>
 		<img class="logo" src="images/logo.jpg">
 	
 	<div class="cartdiv">
 	<img class="carticon" src="images/cart.png">
-	<p class="cartitemsnumber">0 items</p>
+	<div class="cartcount"><p>5</p></div>
 	</div>
 	<div class="topnav">
 		<ul>
 			<li><a href=""> Home</a></li>
 			<li><a href=""> Kurthis</a></li>
-			<li><a href=""> Tops</a></li>	
+			<li><a href=""> Tops</a></li>
 			<li><a href=""> Leggings</a></li>
 		</ul>
 	</div>
@@ -69,6 +71,9 @@ $id= $_GET['id'];
 		<div class="viewimages">
 			
 			<img class="viewimage" src="upload/<?php echo $file[0] ;?>">
+			<div class="sharediv">
+		<p class="share">Share this product on  </p><a href=""><img class=" followicon" src="images/whatsapp.png"></a><a href=""><img class="followicon" src="images/facebook.png"></a>
+		</div>
 		</div>
 		
 		<div class="viewname">

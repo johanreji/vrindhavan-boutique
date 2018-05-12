@@ -3,7 +3,7 @@
 }
 
 html,body{
-	
+	height: 100%; 
 	padding: 0;
 	margin: 0;
 	
@@ -14,7 +14,7 @@ header{
 	z-index: 1;*/
 	position: relative;
 	top: 0;
-	height: 160px;
+	height: 140px;
 	width: 100%;
 
 	background-color: white;
@@ -32,22 +32,51 @@ header{
 
 }
 
-.homeicon{
-	height:40px;
-	width: 40px;
+
+
+.searchdiv{
 	position: absolute;
 	top: 10%;
-	left: 0%;
+	left: 0;
+	line-height: 30px;
 	
-	opacity: 0.5;
-	
+}
+.searchbar{
+	height: 30px;
+	 outline: none;
+	 padding: 5px;
+	 width: 300px;
+	border:1px solid rgb(45,49,145);
+	border-radius: 1px;
+	float: left;
+	color: rgb(45,49,145);
+}
+
+.searchbtn{
+	padding: 0;
+
+	height: 30px;
+	width: 30px;
+	background-color: rgb(45,49,145);
+	border:none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 1px;
+	vertical-align: bottom;
+
+}
+.searchicon{
+	padding: 0;
+	margin: 0;
+	height: 20px;
+	width: 20px;
 }
 
 .logo{
 	height: 100px;
 	width: 100px;
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	transform: translate(-50%,-50%); 
 
@@ -73,12 +102,19 @@ header{
 
 }
 
-.cartitemsnumber{
+.cartcount{
 	position: absolute;
-	color: rgb(45,49,145);
-	right: 0;
-	vertical-align: middle;
-
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: rgb(230,0,142);
+	color: white;
+	left: 30px;
+	text-align: center;
+vertical-align: middle;
+line-height: 20px; 
+	padding: 0;
+	
 }
 .cartdiv:hover, .homeicon:hover{
 	opacity: 1;
@@ -89,11 +125,13 @@ header{
 	width: 100%;
 	height:auto;
 	margin:0px 0;
+	position: relative;
+	top:100px;
 	
-	position: absolute;
+	/*position: absolute;
 	left: 50%;
 	bottom: 0;
-	transform: translateX(-50%);
+	transform: translateX(-50%);*/
 
 }
 .topnav ul{
@@ -103,8 +141,19 @@ header{
 .topnav ul li{
 	display: inline-block;
 	list-style: none;
+	padding:0 50px;
 
 
 }
+.topnav ul li a{
+	text-decoration: none;
+	color: rgb(45,49,145);
+	padding: 5px;
+	font-style: bold;
+	font-size: 20px;
+}
 
+.topnav ul li a:hover{
+color: rgb(230,0,142);
+}
 
