@@ -18,7 +18,7 @@
 		<label>Colors</label>
 		<input type="text" name="colors"><br><br>
 		<label>description</label>
-		<input type="text" name="description"><br><br>
+		<input type="text" name="description" value="NIL"><br><br>
 		<label>price</label>
 		<input type="number" step="0.01" name="price"><br><br>
 		<label>file</label>

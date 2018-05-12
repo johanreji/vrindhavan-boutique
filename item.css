@@ -13,6 +13,23 @@
 	min-height: 800px;
 
 }
+.viewimagelist{
+	float: left;
+	width: 15%;
+	padding-left: 2px;
+	height: 500px;
+	
+	margin: 10px;
+
+}
+
+.imagelistitem{
+	height: auto;
+	width: 100%;
+}
+.imagelistitem:hover{
+	border:1px solid rgb(230,0,142);
+}
 
 .viewimages{
 	 float: left;
@@ -37,7 +54,7 @@ min-height: 800px;
 	
 }
 
-.viewname{
+.viewname{	
 	text-align: center;
 	font-size: 70px;
 	
@@ -49,7 +66,7 @@ min-height: 800px;
 
 hr{
 	text-align: center;
-	width: 400px;
+	width: 300px;
 	color: rgb(45,49,145);
 	opacity: 0.5;
 }
@@ -70,6 +87,7 @@ hr{
 
 .viewitemcode{
 	padding-bottom: 25px;
+	font-style: italic;
 }
 .viewsize{
 	

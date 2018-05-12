@@ -33,7 +33,16 @@ $id= $_GET['id'];
 	<img class="carticon" src="images/cart.png">
 	<p class="cartitemsnumber">0 items</p>
 	</div>
+	<div class="topnav">
+		<ul>
+			<li><a href=""> Home</a></li>
+			<li><a href=""> Kurthis</a></li>
+			<li><a href=""> Tops</a></li>	
+			<li><a href=""> Leggings</a></li>
+		</ul>
 	</div>
+	</div>
+	
 </header>
 
 
@@ -41,9 +50,25 @@ $id= $_GET['id'];
 
 
 <div class="viewcontainer">
+
+		<div class="viewimagelist">
+
+		<?php
+		$file=explode(',', $item['file']);
+		for ($i=0; $i < sizeof($file); $i++) { 
+			
+
+		?>
+
+		<img class="imagelistitem" onclick="showimage(this)" src="upload/<?php echo $file[$i]; ?>">
+		<?php
+    	}
+		?>	
+
+		</div>
 		<div class="viewimages">
 			
-			<img class="viewimage" src="upload/<?php echo $item['file'] ;?>">
+			<img class="viewimage" src="upload/<?php echo $file[0] ;?>">
 		</div>
 		
 		<div class="viewname">
@@ -161,6 +186,12 @@ $id= $_GET['id'];
 		{
 			counter.value--;
 		}
+	}
+
+
+	function showimage(img){
+		var viewimg=document.getElementsByClassName("viewimage")[0];
+		viewimg.src=img.src;
 	}
 </script>
 </html>

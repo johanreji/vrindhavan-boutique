@@ -84,4 +84,27 @@ header{
 	opacity: 1;
 }
 
+.topnav{
+	
+	width: 100%;
+	height:auto;
+	margin:0px 0;
+	
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+
+}
+.topnav ul{
+	padding:0;
+}
+
+.topnav ul li{
+	display: inline-block;
+	list-style: none;
+
+
+}
+
 
