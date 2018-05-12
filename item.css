@@ -25,7 +25,11 @@ min-height: 800px;
 
 .viewimage{
 	width: 100%;
-    height: auto;
+	height: auto;
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%,-50%);
     
 
   
@@ -35,7 +39,7 @@ min-height: 800px;
 
 .viewname{
 	text-align: center;
-	font-size: 30px;
+	font-size: 70px;
 	
 }
 
@@ -45,8 +49,9 @@ min-height: 800px;
 
 hr{
 	text-align: center;
-	width: 200px;
-	color: rgb(45,49,145,0.5);
+	width: 400px;
+	color: rgb(45,49,145);
+	opacity: 0.5;
 }
 
 
@@ -95,11 +100,78 @@ hr{
     font-size: 15px;
     cursor: pointer;
     box-shadow: 2px 2px grey;
-
-
+}
+.add:hover{
+	background-color: #1d2062;
 }
 
 .viewdescription{
 	padding-top: 25px;
 	padding-bottom: 25px;
+}
+
+.radio{
+	display: none;
+
+}
+
+.radiolabel{
+	display: inline-block;
+	height: 30px;
+	width: auto;
+	padding:0 10px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	background-color: rgba(45,49,145,0.5);
+	color: white;
+	font-style: bold;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.radio:checked + .radiolabel{
+	background-color: rgb(45,49,145);
+}
+
+.radiolabel:hover{
+	background-color:rgba(45,49,145,0.75)
+}
+
+.quantitycounter{
+	height: 30px;
+	width: 50px;
+	border:1px solid #808080;
+	border-radius: 2px;
+	appearance:none;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	-moz-appearance:textfield;  /*spinner removing for firefox*/
+}
+
+/* Webkit browsers like Safari and Chrome */
+.quantitycounter::-webkit-inner-spin-button,
+.quantitycounter::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantitybtn{
+	background-color: #e7e7e7;
+	border:1px solid #808080;
+	border-radius: 2px;
+	height: 30px;
+	width: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+
+}
+
+
+.quantitybtn:hover{
+	background-color: #d9d9d9;
 }

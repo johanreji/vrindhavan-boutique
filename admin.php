@@ -15,12 +15,14 @@
 		<input type="text" name="name"><br><br>
 		<label>size</label>
 		<input type="text" name="size"><br><br>
+		<label>Colors</label>
+		<input type="text" name="colors"><br><br>
 		<label>description</label>
 		<input type="text" name="description"><br><br>
 		<label>price</label>
 		<input type="number" step="0.01" name="price"><br><br>
 		<label>file</label>
-		<input type="file" name="file"><br><br>
+		<input type="file" name="file[]" multiple="multiple"><br><br>
 		<button type="submit">submit</button>
 	</form>
 </div>
@@ -34,7 +36,7 @@
 			}
 			if($_SESSION["message"]==2)
 			{
-				echo "<script> alert(\"Successfull deletion\");</script>";
+				//echo "<script> alert(\"Successfull deletion\");</script>";
 			}
 			if($_SESSION["message"]==3)
 			{
@@ -67,10 +69,12 @@
             <th> itemcode</th>
                     <th>Name</th>
                     <th>size</th>
+                    <th>Colors</th>
                      <th>price</th>
                     <th>Description</th>
                     <th>Image</th>
                     <th>Delete</th>
+
                    
 
             </tr>
@@ -85,9 +89,26 @@
                 <td><?php echo $row['item_code']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['size']; ?></td>
+                <td><?php echo $row['colors']; ?></td>
                 <td><?php echo $row['price'] ;?></td>
                 <td><?php echo $row['description'] ;?></td>
-                <td><img height="99" width="99" src="upload/<?php echo $row['file'] ;?>" ></td>
+                <td>
+               	<?php
+               	$filestr=$row['file'];
+               	$file=explode(",",$filestr);
+               	for ($i=0; $i < sizeof($file); $i++) 
+               	{
+               	  ?>
+               	
+                <img height="99" width="99" src="upload/<?php echo $file[$i];?>" >
+                <?php
+                
+            	}
+
+                ?>
+
+
+                </td>
                 
 
                 <td>
