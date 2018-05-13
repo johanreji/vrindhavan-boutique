@@ -1,6 +1,6 @@
 <?php 
 
-$id= $_GET['id'];
+
  $con=  mysqli_connect("localhost", "root", "virurohan", "vrindhavan_db");
 
         if(!$con)
@@ -73,10 +73,26 @@ $id= $_GET['id'];
 		
 	</div>
 
+	<div class="categorycards">
+
+	<span class="categorycardslabel">Our Products</span>
+		<a href=""><div class="f card">
+			<img class="cardimg" src="trial.jpg">
+			<span class="cardlabel">Kurthi</span>
+		</div></a>
+		<a href=""><div class="s card">
+			<img class="cardimg" src="trial2.jpg">
+			<span class="cardlabel">Tops</span>
+		</div></a>
+		<a href=""><div class="t card">
+			<img class="cardimg" src="trail3.jpg">
+			<span class="cardlabel">Leggings</span>
+	</div></a>
+
 
 
 </div>
-
+</div>
 
 <footer>
 	<div class="footercontent">
