@@ -114,6 +114,7 @@
                 <td>
                 	<form action="deleteitem.php" method="POST">
                 		<input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+                		<input type="hidden" name="file" value="<?php echo $row['file'] ?>">
                 		<button type="submit" onclick="return showconfirm()">Delete</button>
                 	</form>
                 </td>
@@ -131,5 +132,49 @@
 		return confirm("are you sure?");
 	}
 </script>
+
+
+	<div class="addslidefield">
+		<h1>Add slides</h1>
+		<form action="addslide.php" method="POST" enctype="multipart/form-data">
+			<input type="file" name="slidefile[]" multiple="multiple">
+			<button type="submit">Add</button>
+		</form>
+	</div>
+	<div class="delslidefield">
+
+	<?php
+			$slideimages = glob("slideshow/*.*");
+			
+			
+		
+			for ($i = 0; $i < count($slideimages); $i++) {
+				
+ 			   ?>
+		
+			 <img height="99px" width="99px" src="<?php echo $slideimages[$i]; ?>"> 
+
+			 			<form action="deleteslide.php" method="POST">
+                		<input type="hidden" name="imgname" value="<?php echo $slideimages[$i]; ?>">
+                		
+                		<button type="submit" onclick="return showconfirm()">Delete</button><br>
+                		</form>
+			 		<?php
+		}
+		?>
+		
+		
+
+	</div>
+
+
+
+
+<?php
+
+
+
+
+?>
 </body>
 </html>
