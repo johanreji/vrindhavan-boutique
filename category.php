@@ -1,15 +1,15 @@
 <?php 
 
-
+$category=$_GET['name'];
  $con=  mysqli_connect("localhost", "root", "virurohan", "vrindhavan_db");
 
         if(!$con)
        {
            die('not connected');
        }
-            $items=  mysqli_query($con, "SELECT * FROM items WHERE id='$id'");
+            $items=  mysqli_query($con, "SELECT * FROM items WHERE category='$category'");
 
-            $item = mysqli_fetch_array($items);
+            
             
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,8 @@
 <head>
 	<title>Vrindhavan</title>
 	<link rel="stylesheet" type="text/css" href="header.css">
-	<link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="stylesheet" type="text/css" href="category.css">
+
 	<link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 <body>
@@ -47,59 +48,35 @@
 	
 </header>
 
-<div class="homecontent">
-
-	<div class="slideshow">
-		
-		<div class="imgholder">
-			<span class="slideshowlabel">New Arrivals</span>
-
-			<?php
-			$files = glob("slideshow/*.*");
-			
-			
-			?>
-			<img class="img show " src="<?php echo $files[0]; ?>">
-			<?php
-			for ($i = 1; $i < count($files); $i++) {
-				
- 			   ?>
-		
-			 <img class="img hide" src="<?php echo $files[$i]; ?>"> 
-		<?php
-		}
-		?>
-		</div>
-		
-	</div>
-
-	<div class="categorycards">
+<div class="catbody">
+	<div class="filterfield"></div>
+	
+	<div class="itemsfield">
 	<?php
-			$kurthiimg = glob("images/kurthi.*");
-			$topsimg = glob("images/tops.*");
-			$leggingsimg = glob("images/leggings.*");
-			?>
 
-	<span class="categorycardslabel">Our Products</span>
-		<a href="category.php?name=kurthi"><div class="f card">
-			<img class="cardimg" src="<?php echo $kurthiimg[0]; ?>">
-			<span class="cardlabel">Kurthi</span>
+             while($row=  mysqli_fetch_array($items))
+
+             {
+             	$filestr=reset(explode(",", $row['file']));
+               ?>
+
+
+               <a href="item.php?id=<?php echo $row['id'];?>"><div class="card">
+
+			<img class="cardimg" src="<?php echo "upload/".$filestr; ?>">
+			<span class="cardlabel"><?php echo $row['name']; ?></span>
+			<span class="cardprice">&#8377;<?php echo $row['price']; ?></span>
 		</div></a>
-		<a href="category.php?name=tops"><div class="s card">
-			<img class="cardimg" src="<?php echo $topsimg[0]; ?>">
-			<span class="cardlabel">Tops</span>
-		</div></a>
-		<a href="category.php?name=leggings"><div class="t card">
-			<img class="cardimg" src="<?php echo $leggingsimg[0]; ?>">
-			<span class="cardlabel">Leggings</span>
-	</div></a>
 
 
+     <?php
+             }
+              ?>
 
-</div>
+	</div>
 </div>
 
-<footer>
+ <footer>
 	<div class="footercontent">
 		<div class="f1">
 			<img class="shipping" src="images/shipping.png">
@@ -138,25 +115,3 @@
 
 	</div>
 </footer>
-
-</body>
-
-<script type="text/javascript">
-	var i=0;
-	setInterval(slidertol,4000);
-	function  slidertol(){
-			//var imgp=document.getElementsByClassName("img")[i-1]
-			var img=document.getElementsByClassName("img")[i];
-			if(i==(document.getElementsByClassName("img").length-1))
-			{i=-1;}
-			var imgn=document.getElementsByClassName("img")[++i];
-			
-			 img.classList.toggle("show");
-			 img.classList.toggle("hide");
-			 imgn.classList.toggle("show");
-			 imgn.classList.toggle("hide");
-
-	}
-</script>
-
-</html>

@@ -1,0 +1,91 @@
+.catbody{
+
+	position: relative;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	max-width: 1200px;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.filterfield{
+	position: relative;
+	height: 800px;
+	width: 20%;
+	border:1px solid black;
+	float: left;
+}
+
+.itemsfield{
+	position: relative;
+	min-height: 800px;
+	width: 100%;
+	border:1px solid black;
+	padding: 20px;
+	
+}
+.card{
+	
+	height: 500px;
+	width: 25%;
+	background-color: #f2f2f2;
+	border:1px solid #e6e6e6;
+margin: 10px;
+	display: inline-block;
+position: relative;
+
+	overflow: hidden;
+	box-shadow: none;
+	transition: box-shadow;
+	transition-duration: 0.2s;
+
+	transition-timing-function: ease-in-out;
+}
+
+.categorycardslabel{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%,0);
+	color: black;
+	font-size: 50px;
+}
+
+
+.cardimg{
+	object-fit: cover;
+	width: 100%;
+	height: 80%;
+
+}
+
+.cardlabel{
+	position: absolute;
+	top: 87%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 30px;
+	color: rgb(45,49,149);
+	font-style: bold;
+	
+}
+
+.cardprice{
+	position: absolute;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+	color: rgb(45,49,149);
+	font-style: normal;
+	
+}
+a{
+	text-decoration: none;
+}
+.card:hover{
+	
+	box-shadow: 0 0 10px grey;
+}

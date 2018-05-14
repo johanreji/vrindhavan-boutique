@@ -19,6 +19,14 @@
 		<input type="text" name="colors"><br><br>
 		<label>description</label>
 		<input type="text" name="description" value="NIL"><br><br>
+		<label>Category</label>
+		<select name="category">
+  		  <option value="none">none</option>
+		  <option value="kurthi">kurthi</option>
+ 		  <option value="tops">tops</option>
+  		  <option value="leggings">leggings</option>
+  		</select><br>
+
 		<label>price</label>
 		<input type="number" step="0.01" name="price"><br><br>
 		<label>file</label>
@@ -69,6 +77,7 @@
             <th> itemcode</th>
                     <th>Name</th>
                     <th>size</th>
+                    <th>category</th>
                     <th>Colors</th>
                      <th>price</th>
                     <th>Description</th>
@@ -89,6 +98,7 @@
                 <td><?php echo $row['item_code']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['size']; ?></td>
+                <td><?php echo $row['category']; ?></td>
                 <td><?php echo $row['colors']; ?></td>
                 <td><?php echo $row['price'] ;?></td>
                 <td><?php echo $row['description'] ;?></td>
@@ -167,14 +177,20 @@
 
 	</div>
 
+	<div class="addcardfield">
+		<h1>Add cards</h1>
+		<form action="addcard.php" method="POST" enctype="multipart/form-data">
+			<label>Kurthi - </label>
+			<input type="file" name="kurthiimg">
+			<label>Tops - </label>
+			<input type="file" name="topsimg">
+			<label>leggings - </label>
+			<input type="file" name="leggingsimg">
+			<button type="submit">Add</button>
+		</form>
+	</div>
+	
 
 
-
-<?php
-
-
-
-
-?>
 </body>
 </html>

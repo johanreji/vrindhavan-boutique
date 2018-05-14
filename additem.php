@@ -7,6 +7,7 @@
 	$size = $_POST['size'];
 	$colors = $_POST['colors'];
 	$price = $_POST['price'];
+	$category = $_POST['category'];
 	$file=array();
 	$flag=0;
 	$countfiles = count($_FILES['file']['name']);
@@ -29,7 +30,7 @@
 	$filestr=implode(",",$file);
  		
 	$con = mysqli_connect("localhost","root","virurohan","vrindhavan_db");
-	$sql ="INSERT INTO items (`name`, `price`, `size`, `colors`, `item_code`, `description`,`file`) VALUES('$name','$price','$size','$colors','$itemcode','$description','$filestr')";
+	$sql ="INSERT INTO items (`name`, `price`, `size`,`category`, `colors`, `item_code`, `description`,`file`) VALUES('$name','$price','$size','$category','$colors','$itemcode','$description','$filestr')";
 	if (!mysqli_query($con,$sql))
 	{	$_SESSION["message"]=4;
  		

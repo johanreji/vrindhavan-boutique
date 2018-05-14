@@ -37,10 +37,10 @@ $id= $_GET['id'];
 	</div>
 	<div class="topnav">
 		<ul>
-			<li><a href=""> Home</a></li>
-			<li><a href=""> Kurthis</a></li>
-			<li><a href=""> Tops</a></li>
-			<li><a href=""> Leggings</a></li>
+			<li><a href="home.php"> Home</a></li>
+			<li><a href="category.php?name=kurthi"> Kurthis</a></li>
+			<li><a href="category.php?name=tops"> Tops</a></li>
+			<li><a href="category.php?name=leggings"> Leggings</a></li>
 		</ul>
 	</div>
 	</div>
