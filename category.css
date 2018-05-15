@@ -12,24 +12,25 @@
 
 .filterfield{
 	position: relative;
-	height: 800px;
-	width: 20%;
+	height: 100px;
+	width: 100%;
 	border:1px solid black;
-	float: left;
+
 }
 
 .itemsfield{
 	position: relative;
 	min-height: 800px;
-	width: 100%;
+	width: auto;
 	border:1px solid black;
-	padding: 20px;
+	padding: 0%;
+	padding-left: 5%;
 	
 }
 .card{
 	
 	height: 500px;
-	width: 25%;
+	width: 30%;
 	background-color: #f2f2f2;
 	border:1px solid #e6e6e6;
 margin: 10px;
@@ -88,4 +89,28 @@ a{
 .card:hover{
 	
 	box-shadow: 0 0 10px grey;
+}
+.pagination{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5%;
+}
+
+.pagination ul li{
+	display: inline-block;
+	list-style: none;
+	background-color: rgba(45,49,145,0.5);
+	color: white;
+	height: 30px;
+	padding:5px;
+	line-height: 20px;
+	vertical-align: middle;
+	min-width: 30px;
+	text-align: center;
+	border-radius: 3px;
+}
+.pagination ul li:hover{
+	cursor: pointer;
+	background-color: rgb(45,49,145);
 }
