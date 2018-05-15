@@ -1,4 +1,13 @@
 <?php 
+if(!isset($_GET['sort']))
+{
+	$val=0;
+
+}
+else{
+	$val=$_GET['sort'];
+}
+
 $resultsperpage=12;
 $category=$_GET['name'];
 
@@ -23,6 +32,7 @@ $category=$_GET['name'];
             
             
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,37 +69,41 @@ $category=$_GET['name'];
 	
 </header>
 
+
 <div class="catbody">
 	<div class="filterfield">
 
+
 	<div class="sortfield">
-			<form method="POST" action="category.php?name=<?php echo $category; ?>&page=<?php echo $p; ?>">
-			<select class="sort" name="sort" onchange="this.form.submit()">
+			<!-- <form method="POST" action="category.php?name=<?php// echo $category; ?>&page=<?php// echo $p; ?>"> -->
+			<!-- onchange="changed(this)" -->
+			<span class="sortlabel">Sort by </span>
+			<select class="sort" name="sort" onchange="location = this.value;">
 
-				<option  value="0">Newest</option>
+				<option  value="category.php?name=<?php echo $category; ?>&sort=0&page=1">Newest</option>
 
-				<option  value="1">price low to high</option>
-				<option  value="2">price high to low</option>
-				<option value="3">name A - Z</option>
-				<option  value="4">name Z - A</option>
+				<option  value="category.php?name=<?php echo $category; ?>&sort=1&page=1">Price low to high</option>
+				<option  value="category.php?name=<?php echo $category; ?>&sort=2&page=1">Price high to low</option>
+				<option value="category.php?name=<?php echo $category; ?>&sort=3&page=1">Name A - Z</option>
+				<option  value="category.php?name=<?php echo $category; ?>&sort=4&page=1">Name Z - A</option>
 			</select>
 			
-			</form>
+		<!-- 	</form> -->
 			
 	</div>
 
 		
 	<div class="pagination">
 		<ul>	
-		<a href="category.php?name=<?php echo $category; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li>prev</li></a>
+		<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li class="unactive listitem">prev</li></a>
 		<?php
 		for ($page=1; $page <= $nofpages ; $page++) {
 		?>
-			<a href="category.php?name=<?php echo $category; ?>&page=<?php echo $page; ?>"><li><?php echo $page; ?></li></a>
+			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php echo $page; ?>"><li class="unactive listitem"><?php echo $page; ?></li></a>
 			<?php
 			 }
 			 ?>
-			<a href="category.php?name=<?php echo $category; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li>next</li></a> 
+			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li class="unactive listitem">next</li></a> 
 		</ul>
 
 	</div>
@@ -97,15 +111,16 @@ $category=$_GET['name'];
 	</div>
 	
 	<div class="itemsfield">
+	
 	<?php
 
-			if(!isset($_POST['sort']))
-			{
-			$val=0;
-			}
-			else{
-			$val=$_POST['sort'];
-			}
+			// if(!isset($_POST['sort']))
+			// {
+			// $val=0;
+			// }
+			// else{
+			// $val=$_POST['sort'];
+			// }
 		
 
 			$offset=($p-1)*$resultsperpage;
@@ -117,21 +132,21 @@ $category=$_GET['name'];
 
 			}
 			elseif ($val==1) {
-				echo $val;
+				// echo $val;
 				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY price LIMIT ".$offset.",".$resultsperpage;
 
 			}
 			elseif ($val==2) {
-				echo $val;
+				//echo $val;
 				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY price DESC  LIMIT ".$offset.",".$resultsperpage;
 			}
 			
 			elseif ($val==3) {
-				echo $val;
+				//echo $val;
 				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY name  LIMIT ".$offset.",".$resultsperpage;
 			}
 			elseif ($val==4) {
-				echo $val;
+				//echo $val;
 				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY name DESC  LIMIT ".$offset.",".$resultsperpage;
 			}
 			
@@ -156,6 +171,22 @@ $category=$_GET['name'];
              }
               ?>
 
+	</div>
+	<div class="filterfield">
+		<div class="pagination">
+		<ul>	
+		<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li class="unactive btmlistitem">prev</li></a>
+		<?php
+		for ($page=1; $page <= $nofpages ; $page++) {
+		?>
+			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php echo $page; ?>"><li class="unactive btmlistitem"><?php echo $page; ?></li></a>
+			<?php
+			 }
+			 ?>
+			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li class="unactive btmlistitem">next</li></a> 
+		</ul>
+
+	</div>
 	</div>
 </div>
 
@@ -206,5 +237,13 @@ if(<?php echo $val; ?>==i)
 document.getElementsByTagName("option")[i].setAttribute("selected","selected");	
 }
 }
+
+var listitup=document.getElementsByClassName("listitem")[<?php echo $p; ?>];
+var listitdwn=document.getElementsByClassName("btmlistitem")[<?php echo $p; ?>];
+listitup.classList.remove("unactive");
+listitup.classList.add("active");
+listitdwn.classList.remove("unactive");
+listitdwn.classList.add("active");
+
 </script>
 </html>

@@ -1,7 +1,7 @@
 .catbody{
 
 	position: relative;
-	margin-top: 10px;
+	
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10px;
@@ -12,9 +12,10 @@
 
 .filterfield{
 	position: relative;
-	height: 100px;
+	height: 40px;
 	width: 100%;
-	border:1px solid black;
+	padding-bottom: 10px;
+	
 
 }
 
@@ -22,7 +23,7 @@
 	position: relative;
 	min-height: 800px;
 	width: auto;
-	border:1px solid black;
+
 	padding: 0%;
 	padding-left: 5%;
 	
@@ -100,7 +101,7 @@ a{
 .pagination ul li{
 	display: inline-block;
 	list-style: none;
-	background-color: rgba(45,49,145,0.5);
+	
 	color: white;
 	height: 30px;
 	padding:5px;
@@ -113,4 +114,40 @@ a{
 .pagination ul li:hover{
 	cursor: pointer;
 	background-color: rgb(45,49,145);
+}
+.pagination ul li a{
+color: white;
+
+}
+.unactive{
+	background-color: rgba(45,49,145,0.5);
+}
+.active{
+background-color: rgba(45,49,145,0.8);
+}
+.sortfield{
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 6%;
+
+}
+
+.sort{
+
+	background-color: rgba(45,49,145,0.5);
+	color: white;
+	outline: rgb(45,49,145);
+	padding: 5px;
+	text-align: center;
+	border-radius: 3px;
+}
+.sortlabel{
+
+}
+
+.sort:hover{
+	cursor: pointer;
+	background-color: rgba(45,49,145,0.6);
 }
