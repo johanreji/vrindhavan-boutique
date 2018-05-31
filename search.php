@@ -9,7 +9,7 @@ else{
 }
 
 $resultsperpage=12;
-$category=$_GET['name'];
+$search=$_GET['search'];
 
 $empty=1;
 
@@ -20,7 +20,7 @@ $empty=1;
        {
            die('not connected');
        }
-            $items=  mysqli_query($con, "SELECT * FROM items WHERE category='$category'");
+            $items=  mysqli_query($con, "SELECT * FROM items WHERE name LIKE '%$search%'");
        $nofresults=mysqli_num_rows($items);
             $nofpages=ceil($nofresults/$resultsperpage);
              if(!isset($_GET['page']))
@@ -38,10 +38,10 @@ $empty=1;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vsarindhavan</title>
+	<title>Vrindhavan</title>
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="category.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 <body>
@@ -85,12 +85,12 @@ $empty=1;
 			<span class="sortlabel">Sort by </span>
 			<select class="sort" name="sort" onchange="location = this.value;">
 
-				<option  value="category.php?name=<?php echo $category; ?>&sort=0&page=1">Newest</option>
+				<option  value="search.php?search=<?php echo $search; ?>&sort=0&page=1">Newest</option>
 
-				<option  value="category.php?name=<?php echo $category; ?>&sort=1&page=1">Price low to high</option>
-				<option  value="category.php?name=<?php echo $category; ?>&sort=2&page=1">Price high to low</option>
-				<option value="category.php?name=<?php echo $category; ?>&sort=3&page=1">Name A - Z</option>
-				<option  value="category.php?name=<?php echo $category; ?>&sort=4&page=1">Name Z - A</option>
+				<option  value="search.php?search=<?php echo $search; ?>&sort=1&page=1">Price low to high</option>
+				<option  value="search.php?search=<?php echo $search; ?>&sort=2&page=1">Price high to low</option>
+				<option value="search.php?search=<?php echo $search; ?>&sort=3&page=1">Name A - Z</option>
+				<option  value="search.php?search=<?php echo $search; ?>&sort=4&page=1">Name Z - A</option>
 			</select>
 			
 		<!-- 	</form> -->
@@ -100,15 +100,15 @@ $empty=1;
 		
 	<div class="pagination">
 		<ul>	
-		<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li class="unactive listitem">prev</li></a>
+		<a href="search.php?search=<?php echo $search; ?>&sort=<?php echo $val; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li class="unactive listitem">prev</li></a>
 		<?php
 		for ($page=1; $page <= $nofpages ; $page++) {
 		?>
-			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php echo $page; ?>"><li class="unactive listitem"><?php echo $page; ?></li></a>
+			<a href="search.php?search=<?php echo $search; ?>&sort=<?php echo $val; ?>&page=<?php echo $page; ?>"><li class="unactive listitem"><?php echo $page; ?></li></a>
 			<?php
 			 }
 			 ?>
-			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li class="unactive listitem">next</li></a> 
+			<a href="search.php?search=<?php echo $search; ?>&sort=<?php echo $val; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li class="unactive listitem">next</li></a> 
 		</ul>
 
 	</div>
@@ -132,27 +132,27 @@ $empty=1;
 			//$sql="SELECT * FROM items WHERE category='".$category."' LIMIT ".$offset.",".$resultsperpage;
 			if ($val==0) {
 				
-				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY id DESC  LIMIT ".$offset.",".$resultsperpage;
+				$sql="SELECT * FROM items WHERE name LIKE '%".$search."%' ORDER BY id DESC  LIMIT ".$offset.",".$resultsperpage;
 				
 
 			}
 			elseif ($val==1) {
 				// echo $val;
-				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY price LIMIT ".$offset.",".$resultsperpage;
+				$sql="SELECT * FROM items WHERE name LIKE '%".$search."%' ORDER BY price LIMIT ".$offset.",".$resultsperpage;
 
 			}
 			elseif ($val==2) {
 				//echo $val;
-				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY price DESC  LIMIT ".$offset.",".$resultsperpage;
+				$sql="SELECT * FROM items WHERE name LIKE '%".$search."%' ORDER BY price DESC  LIMIT ".$offset.",".$resultsperpage;
 			}
 			
 			elseif ($val==3) {
 				//echo $val;
-				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY name  LIMIT ".$offset.",".$resultsperpage;
+				$sql="SELECT * FROM items WHERE name LIKE '%".$search."%' ORDER BY name  LIMIT ".$offset.",".$resultsperpage;
 			}
 			elseif ($val==4) {
 				//echo $val;
-				$sql="SELECT * FROM items WHERE category='".$category."' ORDER BY name DESC  LIMIT ".$offset.",".$resultsperpage;
+				$sql="SELECT * FROM items WHERE name LIKE '%".$search."%' ORDER BY name DESC  LIMIT ".$offset.",".$resultsperpage;
 			}
 			
 			
@@ -187,15 +187,15 @@ $empty=1;
 	<div class="filterfield">
 		<div class="pagination">
 		<ul>	
-		<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li class="unactive btmlistitem">prev</li></a>
+		<a href="search.php?name=<?php echo $search; ?>&sort=<?php echo $val; ?>&page=<?php if($p>1){echo $p-1;}else{echo $p;} ?>"><li class="unactive btmlistitem">prev</li></a>
 		<?php
 		for ($page=1; $page <= $nofpages ; $page++) {
 		?>
-			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php echo $page; ?>"><li class="unactive btmlistitem"><?php echo $page; ?></li></a>
+			<a href="search.php?name=<?php echo $search; ?>&sort=<?php echo $val; ?>&page=<?php echo $page; ?>"><li class="unactive btmlistitem"><?php echo $page; ?></li></a>
 			<?php
 			 }
 			 ?>
-			<a href="category.php?name=<?php echo $category; ?>&sort=<?php echo $val; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li class="unactive btmlistitem">next</li></a> 
+			<a href="search.php?name=<?php echo $search; ?>&sort=<?php echo $val; ?>&page=<?php if($p<$nofpages){echo $p+1;}else{echo $p;} ?>"><li class="unactive btmlistitem">next</li></a> 
 		</ul>
 
 	</div>

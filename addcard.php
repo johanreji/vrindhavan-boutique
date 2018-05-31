@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 session_start();
 $flag=0;
@@ -10,14 +10,14 @@ $allowed = array("jpg","jpeg","gif","png","JPG","JPEG","GIF","PNG"," ");
 	$ext3=end(explode(".", $_FILES["leggingsimg"]["name"]));
 	 	
 	if(!empty($_FILES['kurthiimg']['name']))
- 	 {
+ 	 {	unlink(glob("images/kurthi.*")[0]);
 	 	if((!(in_array($ext1, $allowed)))) {
  		$_SESSION["message"]=3;	
  		$flag=1;
  	 }
  	}
  	 if(!empty($_FILES['topsimg']['name']))
- 	 {
+ 	 {	unlink(glob("images/tops.*")[0]);
  	 if((!(in_array($ext2, $allowed)))) {
  		$_SESSION["message"]=3;	
  		$flag=1;	
@@ -25,6 +25,7 @@ $allowed = array("jpg","jpeg","gif","png","JPG","JPEG","GIF","PNG"," ");
  	}
  	if(!empty($_FILES['leggingsimg']['name']))
  	 {
+ 	 	unlink(glob("images/leggings.*")[0]);
  	 if((!(in_array($ext3, $allowed)))) {
  		$_SESSION["message"]=3;	
  		$flag=1;

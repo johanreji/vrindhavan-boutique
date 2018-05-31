@@ -19,17 +19,20 @@ $id= $_GET['id'];
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="item.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
 </head>
 <body>
 <header>
 	<div class="headercontent">
+	<img class="logo" src="images/logo.png">
+		
 		<div class="searchdiv">
-		<form method="get">
+		<form method="get" action="search.php">
 		<input class="searchbar" type="text" name="search" placeholder="What do you want to find?">
 		<button class="searchbtn" type="submit"><img class="searchicon" src="images/search.png"></button>
 		</form>
 		</div>
-		<img class="logo" src="images/logo.jpg">
+	
 	
 	<div class="cartdiv">
 	<img class="carticon" src="images/cart.png">
@@ -75,7 +78,7 @@ $id= $_GET['id'];
 		<p class="share">Share this product on  </p><a href=""><img class=" followicon" src="images/whatsapp.png"></a><a href=""><img class="followicon" src="images/facebook.png"></a>
 		</div>
 		</div>
-		
+		<div class="viewdetails">
 		<div class="viewname">
 			<span><?php echo $item['name']; ?></span>
 		</div>
@@ -137,7 +140,7 @@ $id= $_GET['id'];
 			<span class="select">Description</span>
 			<p><?php echo $item['description']; ?></p>
 		</div>
-		
+		</div>
 </div>
 <footer>
 	<div class="footercontent">

@@ -1,7 +1,7 @@
 .catbody{
 
 	position: relative;
-	
+	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10px;
@@ -21,7 +21,7 @@
 
 .itemsfield{
 	position: relative;
-	min-height: 800px;
+	min-height: 600px;
 	width: auto;
 
 	padding: 0%;
@@ -46,12 +46,12 @@ position: relative;
 	transition-timing-function: ease-in-out;
 }
 
-.categorycardslabel{
+.empty{
 	position: absolute;
 	left: 50%;
-	top: 10%;
-	transform: translate(-50%,0);
-	color: black;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	color: grey;
 	font-size: 50px;
 }
 
@@ -65,10 +65,13 @@ position: relative;
 
 .cardlabel{
 	position: absolute;
-	top: 87%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	font-size: 30px;
+	top: 82%;
+	left: 50%;	
+	max-height: 10%;
+	max-width: 90%;
+
+	transform: translate(-50%,0);
+	font-size: 25px;
 	color: rgb(45,49,149);
 	font-style: bold;
 	
@@ -79,7 +82,7 @@ position: relative;
 	top: 92%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	font-size: 20px;
+	font-size: 25px;
 	color: rgb(45,49,149);
 	font-style: normal;
 	
@@ -103,9 +106,10 @@ a{
 	list-style: none;
 	
 	color: white;
-	height: 30px;
+	height: 25px;
 	padding:5px;
-	line-height: 20px;
+	line-height: 15px;
+	font-size: 15px;
 	vertical-align: middle;
 	min-width: 30px;
 	text-align: center;
@@ -135,7 +139,7 @@ background-color: rgba(45,49,145,0.8);
 }
 
 .sort{
-
+	font-size: 15px;
 	background-color: rgba(45,49,145,0.5);
 	color: white;
 	outline: rgb(45,49,145);
@@ -144,7 +148,7 @@ background-color: rgba(45,49,145,0.8);
 	border-radius: 3px;
 }
 .sortlabel{
-
+font-size: 15px;
 }
 
 .sort:hover{
