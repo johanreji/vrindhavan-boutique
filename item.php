@@ -2,6 +2,9 @@
 session_start();
 $id= $_GET['id'];
 $total=0;
+header('Cache-Control: no cache'); //no cache
+
+session_cache_limiter('must-revalidate');
  $con=  mysqli_connect("localhost", "root", "virurohan", "vrindhavan_db");
 
         if(!$con)
@@ -47,7 +50,7 @@ $total=0;
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="item.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
-	<link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -147,7 +150,7 @@ $total=0;
 			
 		</div>
 		<div class="sharediv">
-		<p class="share">Share on </p><a href=""><img class=" followicon" src="images/whatsapp.png"></a><a href=""><img class="followicon" src="images/facebook.png"></a>
+		<p class="share">Share on </p><a href="whatsapp://send?text=http://192.168.43.169:8080/vrindhavan/item.php?id=<?php echo $id; ?>"><img class=" followicon" src="images/whatsapp.png"></a>
 		</div>
 		<div class="viewdetails">
 
@@ -238,8 +241,8 @@ $total=0;
 
 			<a href="#">vrindhavan.com</a>
 			<br>
-			<a href=""><img class="followicon" src="images/facebook.png"></a>
-			<a href=""><img class="followicon" src="images/whatsapp.png"></a>
+			<a href="https://www.facebook.com/bindhu.surya.1"><img class="followicon" src="images/facebook.png"></a>
+			<a href="whatsapp://send?text=Hi!&phone=+918547814212"><img class="followicon" src="images/whatsapp.png"></a>
 
 		</div>
 		<div class="bottomnav">
@@ -257,7 +260,9 @@ $total=0;
 	</div>
 </footer>
 </body>
-
+<?php
+mysqli_close($con);
+?>
 <script type="text/javascript">
 	function plus(){
 		var counter=document.getElementsByClassName("quantitycounter")[0];

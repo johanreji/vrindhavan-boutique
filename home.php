@@ -167,8 +167,8 @@ $total=0;
 
 			<a href="#">vrindhavan.com</a>
 			<br>
-			<a href=""><img class="followicon" src="images/facebook.png"></a>
-			<a href=""><img class="followicon" src="images/whatsapp.png"></a>
+			<a href="https://www.facebook.com/bindhu.surya.1"><img class="followicon" src="images/facebook.png"></a>
+			<a href="whatsapp://send?text=Hi!&phone=+918547814212"><img class="followicon" src="images/whatsapp.png"></a>
 
 		</div>
 		<div class="bottomnav">
@@ -187,7 +187,9 @@ $total=0;
 </footer>
 
 </body>
-
+<?php
+mysqli_close($con);
+?>
 <script type="text/javascript">
 	var i=0;
 	setInterval(slidertol,4000);

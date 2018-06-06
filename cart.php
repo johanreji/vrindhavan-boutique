@@ -182,8 +182,8 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 
 			<a href="#">vrindhavan.com</a>
 			<br>
-			<a href=""><img class="followicon" src="images/facebook.png"></a>
-			<a href=""><img class="followicon" src="images/whatsapp.png"></a>
+			<a href="https://www.facebook.com/bindhu.surya.1"><img class="followicon" src="images/facebook.png"></a>
+			<a href="whatsapp://send?text=Hi!&phone=+918547814212"><img class="followicon" src="images/whatsapp.png"></a>
 
 		</div>
 		<div class="bottomnav">
@@ -202,7 +202,9 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 </footer>
 
 </body>
-
+<?php
+mysqli_close($con);
+?>
 <script type="text/javascript">
 
 

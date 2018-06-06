@@ -94,7 +94,7 @@ $total=0;
 </header>
 
 <div class="content">
-<form name="orderform" action="placeorder.php" method="POST">
+<form name="orderform" id="orderform" action="placeorder.php" method="POST">
 <div class="ba">
 		<span class="baheader">
 			Billing Address
@@ -140,7 +140,8 @@ $total=0;
 			Order review
 		</span>
 
-		<span class="oid">Order ID : </span>
+		<span class="oid">Order ID : <?php $orderid=rand(0, time()); echo $orderid; ?> </span>
+		<input type="hidden" name="orderid" value="<?php  echo $orderid; ?>">
 		<ul class="orul">
 			<?php 
 				$total=0;
@@ -199,7 +200,7 @@ $total=0;
 			Note
 		</span>
 	
-	<textarea form="orderform" name="note" placeholder="Provide any message here" class="note" ></textarea>
+	<textarea form="orderform" id="note" name="note" placeholder="Provide any message here"  ></textarea>
 </div>
 <input type="submit" name="placeorder" value="Place Order" class="pobtn" onclick="shipping()">
 </form>
@@ -227,8 +228,8 @@ $total=0;
 
 			<a href="#">vrindhavan.com</a>
 			<br>
-			<a href=""><img class="followicon" src="images/facebook.png"></a>
-			<a href=""><img class="followicon" src="images/whatsapp.png"></a>
+			<a href="https://www.facebook.com/bindhu.surya.1"><img class="followicon" src="images/facebook.png"></a>
+			<a href="whatsapp://send?text=Hi!&phone=+918547814212"><img class="followicon" src="images/whatsapp.png"></a>
 
 		</div>
 		<div class="bottomnav">
@@ -247,7 +248,9 @@ $total=0;
 </footer>
 
 </body>
-
+<?php
+mysqli_close($con);
+?>
 <script type="text/javascript">
 
 

@@ -268,8 +268,8 @@ $empty=1;
 
 			<a href="#">vrindhavan.com</a>
 			<br>
-			<a href=""><img class="followicon" src="images/facebook.png"></a>
-			<a href=""><img class="followicon" src="images/whatsapp.png"></a>
+			<a href="https://www.facebook.com/bindhu.surya.1"><img class="followicon" src="images/facebook.png"></a>
+			<a href="whatsapp://send?text=Hi!&phone=+918547814212"><img class="followicon" src="images/whatsapp.png"></a>
 
 		</div>
 		<div class="bottomnav">
@@ -287,6 +287,9 @@ $empty=1;
 	</div>
 </footer>
 </body>
+<?php
+mysqli_close($con);
+?>
 <script type="text/javascript">
 for (var i = 0; i <5; i++) {
 if(<?php echo $val; ?>==i)
