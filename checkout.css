@@ -1,0 +1,1071 @@
+
+@media (min-width: 1200px){
+.content{
+	min-height: auto;
+	margin-top: 120px;
+	height: auto;
+	position: relative;
+	overflow: show;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ba{
+	position: relative;
+	height: auto;
+	min-height: 200px;
+	width: 30%;
+	margin-left: 10px;
+	
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+	
+	padding: 10px;
+	padding-top: 55px;
+	background-color: white;
+	box-shadow: 0px 4px 10px grey;
+}
+
+.baheader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 45px;
+	width: 100%;
+	color: white;
+	background-color: rgb(45,49,145);
+	text-align: left;
+	padding: 10px;
+	font-size: 25px;
+
+}
+
+.bfa,.bla,.btele,.bemail,.bpincode,.bcity,.bstate,.bcountry{
+	height: 30px;
+	padding: 5px;
+	font-size: 15px;
+	width: 46%;
+	border:none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 1%;
+	margin-left:1%;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+.bfa:focus,.bla:focus,.btele:focus,.bemail:focus,.bpincode:focus,.bcity:focus,.bstate:focus,.bcountry:focus,.baddress:focus,.baddressrest:focus{
+	border-bottom: 2px solid rgb(42,0,300);
+}
+.baddress,.baddressrest{
+	height: 30px;
+	padding: 5px;
+	font-size: 15px;
+	width: 94%;
+	border:none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 2%;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+
+.checkboxlabel{
+	
+	height: 15px;
+	text-align: center;
+	font-size: 15px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-bottom: 10px;
+
+}
+
+.checkbox{
+height: 15px;
+width: 15px;
+
+}
+
+
+.sa{
+	position: absolute;
+	height: auto;
+	min-height: 200px;
+	width: 30%;
+	top: 410px;
+	
+	left: 10px;
+margin:none;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 55px;
+	background-color: white;
+	display: none;
+	box-shadow: 0px 4px 10px grey;
+}
+
+
+.orderreview{
+	display: block;
+	float: left;
+	position: relative;
+	height: auto;
+	min-height: 390px;
+	width: 65%;
+	left: 0;
+	top: 5%;
+	margin: none;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 55px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+}
+
+.oid{
+		height: 40px;
+	text-align: center;
+	font-size: 20px;
+	display: block;
+	margin-left: auto;
+	padding: 10px;
+	margin-right: auto;
+	
+	padding-bottom: 10px;
+}
+
+.orul{
+	padding:0;
+	
+	overflow: visible;
+	position: relative;
+	height: auto;
+	margin: 0;
+	margin-bottom: 40px;
+	transition:max-height 0.5s ease-in-out;
+	
+}
+
+.orul li{
+	position: relative;
+	display: block;
+	list-style: none;
+	padding:10px;
+	height: 150px;
+	
+	border-top: 1px solid rgba(45,49,145,0.5);
+
+}
+.orfooter{
+	
+	height: 50px;
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+	border-top:1px solid rgba(45,49,145,0.5);
+}
+
+.orbtn{
+	height: 80px;
+	width: 50%;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	background-color: #4f53c9;
+	color: white;
+border-style: none;
+    border-radius: 5px;
+    font-size: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px grey;
+
+}
+
+.orbtn:hover{
+	background-color: rgb(45,49,145);
+}
+.orname{
+
+     
+    
+    font-size: 25px;
+position: absolute;
+    top: 20px;
+    left: 180px;
+    width: 50%;
+    overflow-x: auto;
+}
+
+.orcolor{
+	font-size: 15px;
+	position: absolute;
+    top: 120px;
+    left: 180px;
+}
+.orquantity{
+	font-size: 15px;
+	position: absolute;
+    top: 120px;
+    right: 30px;
+}
+.orsize{
+	font-size: 15px;
+	position: absolute;
+    top: 120px;
+    left: 50%;
+
+}
+.orprice{
+	font-size: 25px;
+	position: absolute;
+    top: 20px;
+    right: 30px;
+
+ 
+}
+
+.orftotal{
+	font-size: 25px;
+	position: absolute;
+    top: 15px;
+    right: 30px;
+}
+.orid{
+	font-size: 15px;
+	position: absolute;
+    top: 50px;
+    left:180px;
+    font-style: italic;
+}
+.orimg{
+	max-height: 130px;
+	max-width: 130px;
+	min-height: 130px;
+	min-width: 130px;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+}
+
+
+.paymentoptions{
+	display: block;
+	float: left;
+
+	position: relative;
+	height: auto;
+	min-height: 150px;
+	width: 32%;
+	left: 0%;
+	top: 5%;
+	margin: none;
+	margin-left: 390px;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 55px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+}
+
+.radiolabel{
+	
+	height: 20px;
+	text-align: center;
+	font-size: 20px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-bottom: 10px;
+
+}
+
+
+
+.paymentradio{
+	    vertical-align: text-bottom;
+	height: 20px;
+width: 20px;
+}
+
+.bankdetail{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	display: block;
+	padding: 10px;
+	font-size: 15px;
+}
+.paytmdetail{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	display: none;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.notediv{
+display: block;
+	float: left;
+
+	position: relative;
+	height: auto;
+	height: 290px;
+	width: 32%;
+	right:  0%;
+	top: 5%;
+	margin: none;
+	margin-left: 1%;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 55px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+
+}
+.note{
+	height: 235px;
+	width: 100%;
+	font-size: 15px;
+	resize: none;
+	padding: 10px;
+	outline: none;
+	border:none;
+}
+
+.pobtn{
+	height: 45px;
+	width: 32%;
+	position:relative;
+	
+	margin-left: 1%;
+	
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: #4f53c9;
+	color: white;
+border-style: none;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px grey;
+
+}
+
+.pobtn:hover{
+	background-color: rgb(45,49,145);
+}
+}
+
+
+
+@media only screen and (max-device-width:1199px) and (min-device-width: 640px){
+.content{
+	min-height: 800px;
+	margin-top: 120px;
+	height: auto;
+}
+
+.ba{
+	position: relative;
+	height: auto;
+	min-height: 600px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	box-shadow: 0px 4px 10px grey;
+}
+
+.baheader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	color: white;
+	background-color: rgb(45,49,145);
+	text-align: left;
+	padding: 15px;
+	font-size: 30px;
+
+}
+
+.bfa,.bla,.btele,.bemail,.bpincode,.bcity,.bstate,.bcountry{
+	height: 50px;
+	padding: 15px;
+	font-size: 20px;
+	width: 45%;
+	border:none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+.bfa:focus,.bla:focus,.btele:focus,.bemail:focus,.bpincode:focus,.bcity:focus,.bstate:focus,.bcountry:focus,.baddress:focus,.baddressrest:focus{
+	border-bottom: 2px solid rgb(42,0,300);
+}
+.baddress,.baddressrest{
+	height: 50px;
+	padding: 15px;
+	font-size: 20px;
+	width: 94%;
+	border:none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 2%;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+
+.checkboxlabel{
+	
+	height: 20px;
+	text-align: center;
+	font-size: 20px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-bottom: 20px;
+
+}
+
+.checkbox{
+height: 20px;
+width: 20px;
+}
+
+
+.sa{
+	position: relative;
+	height: auto;
+	min-height: 600px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	display: none;
+	box-shadow: 0px 4px 10px grey;
+}
+
+
+.orderreview{
+	display: block;
+	position: relative;
+	height: auto;
+	min-height: 250px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+}
+
+.oid{
+		height: 40px;
+	text-align: center;
+	font-size: 30px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	border-bottom: 1px solid rgb(45,49,145);
+	padding-bottom: 10px;
+}
+
+.orul{
+	padding:0;
+	
+	overflow: scroll;
+	position: relative;
+	height: auto;
+	margin: 0;
+	margin-bottom: 0px;
+	transition:max-height 0.5s ease-in-out;
+	
+}
+
+.orul li{
+	position: relative;
+	display: block;
+	list-style: none;
+	padding:15px;
+	height: 180px;
+	border-bottom: 1px solid rgba(45,49,145,0.5);
+
+}
+.orfooter{
+	
+	height: 80px;
+	width: 100%;
+	position: relative;
+	border-top:1px solid rgba(45,49,145,0.5);
+}
+
+.orbtn{
+	height: 80px;
+	width: 50%;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	background-color: #4f53c9;
+	color: white;
+border-style: none;
+    border-radius: 5px;
+    font-size: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px grey;
+
+}
+
+.orbtn:hover{
+	background-color: rgb(45,49,145);
+}
+.orname{
+	font-size: 30px;
+position: absolute;
+    top: 30px;
+     width: 50%;
+    overflow-x: auto;
+    left: 200px;
+    text-align: left;
+}
+
+.orcolor{
+	font-size: 20px;
+	position: absolute;
+    top: 130px;
+    left: 200px;
+}
+.orquantity{
+	font-size: 20px;
+	position: absolute;
+    top: 130px;
+    right: 30px;
+}
+.orsize{
+	font-size: 20px;
+	position: absolute;
+    top: 130px;
+    left: 50%;
+
+}
+.orprice{
+	font-size: 30px;
+	position: absolute;
+    top: 30px;
+    right: 30px;
+
+}
+
+.orftotal{
+	font-size: 30px;
+	position: absolute;
+    top: 25px;
+    right: 30px;
+}
+.orid{
+	font-size: 20px;
+	position: absolute;
+    top: 60px;
+    left: 200px;
+    font-style: italic;
+}
+.orimg{
+	max-height: 150px;
+	max-width: 150px;
+	min-height: 150px;
+	min-width: 150px;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translateY(-50%);
+}
+
+
+.paymentoptions{
+	display: block;
+	position: relative;
+	height: auto;
+	min-height: 250px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+}
+
+.radiolabel{
+	
+	height: 30px;
+	text-align: center;
+	font-size: 30px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-bottom: 20px;
+
+}
+
+
+
+.paymentradio{
+	    vertical-align: text-bottom;
+	height: 30px;
+width: 30px;
+}
+
+.bankdetail{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	display: block;
+	padding: 20px;
+	font-size: 25px;
+}
+.paytmdetail{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	display: none;
+	padding: 20px;
+	font-size: 25px;
+}
+
+.notediv{
+	display: block;
+	
+
+	position: relative;
+	height: auto;
+	height: 250px;
+	width: 96%;
+	
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+
+}
+.note{
+	height: 150px;
+	width: 100%;
+	font-size: 20px;
+	padding: 10px;
+	outline: none;
+	resize: none;
+	border:none;
+}
+
+
+.pobtn{
+	height: 50px;
+	width: 50%;
+	position:relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: #4f53c9;
+	color: white;
+border-style: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px grey;
+
+}
+
+.pobtn:hover{
+	background-color: rgb(45,49,145);
+}
+}
+
+
+@media only screen and (max-device-width: 639px){
+.content{
+	min-height: 800px;
+	margin-top: 200px;
+	height: auto;
+}
+
+.ba{
+	position: relative;
+	height: auto;
+	min-height: 600px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	box-shadow: 0px 4px 10px grey;
+}
+
+.baheader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	color: white;
+	background-color: rgb(45,49,145);
+	text-align: left;
+	padding: 15px;
+	font-size: 50px;
+
+}
+
+.bfa,.bla,.btele,.bemail,.bpincode,.bcity,.bstate,.bcountry{
+	height: 80px;
+	padding: 20px;
+	font-size: 40px;
+	width: 45%;
+	border:none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+.bfa:focus,.bla:focus,.btele:focus,.bemail:focus,.bpincode:focus,.bcity:focus,.bstate:focus,.bcountry:focus,.baddress:focus,.baddressrest:focus{
+	border-bottom: 2px solid rgb(42,0,300);
+}
+.baddress,.baddressrest{
+	height: 80px;
+	padding: 20px;
+	font-size: 40px;
+	width: 94%;
+	border:none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 2%;
+	border-bottom: 1px solid grey;
+	outline: none;
+}
+
+
+.checkboxlabel{
+	
+	height: 40px;
+	text-align: center;
+	font-size: 40px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-bottom: 20px;
+
+}
+
+.checkbox{
+height: 40px;
+width: 40px;
+}
+
+
+.sa{
+	position: relative;
+	height: auto;
+	min-height: 600px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	display: none;
+	box-shadow: 0px 4px 10px grey;
+}
+
+
+.orderreview{
+	display: block;
+	position: relative;
+	height: auto;
+	min-height: 250px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+}
+
+.oid{
+		height: 70px;
+	text-align: center;
+	font-size: 50px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgb(45,49,145);	
+}
+
+.orul{
+	padding:0;
+	
+	overflow: scroll;
+	position: relative;
+	height: auto;
+	margin: 0;
+	margin-bottom: 0px;
+	transition:max-height 0.5s ease-in-out;
+	
+}
+
+.orul li{
+	position: relative;
+	display: block;
+	list-style: none;
+	padding:20px;
+	height: 250px;
+	border-bottom: 1px solid rgba(45,49,145,0.5);
+
+}
+.orfooter{
+	
+	height: 100px;
+	width: 100%;
+	position: relative;
+	border-top:1px solid rgba(45,49,145,0.5);
+}
+
+.orbtn{
+	height: 80px;
+	width: 50%;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	background-color: #4f53c9;
+	color: white;
+border-style: none;
+    border-radius: 5px;
+    font-size: 50px;
+    cursor: pointer;
+    box-shadow: 2px 2px grey;
+
+}
+
+.orbtn:hover{
+	background-color: rgb(45,49,145);
+}
+.orname{
+	font-size: 50px;
+position: absolute;
+    top: 50px;
+     width: 50%;
+    overflow-x: auto;
+    left: 250px;
+    text-align: left;
+}
+
+.orcolor{
+	font-size: 30px;
+	position: absolute;
+    top: 160px;
+    left: 250px;
+}
+.orquantity{
+	font-size: 30px;
+	position: absolute;
+    top: 160px;
+    right: 30px;
+}
+.orsize{
+	font-size: 30px;
+	position: absolute;
+    top: 160px;
+    left: 50%;
+
+}
+.orprice{
+	font-size: 50px;
+	position: absolute;
+    top: 50px;
+    right: 30px;
+
+}
+
+.orftotal{
+	font-size: 50px;
+	position: absolute;
+    top: 25px;
+    right: 30px;
+}
+.orid{
+	font-size: 30px;
+	position: absolute;
+    top: 100px;
+    left: 250px;
+    font-style: italic;
+}
+.orimg{
+	max-height: 200px;
+	max-width: 200px;
+	min-height: 200px;
+	min-width: 200px;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translateY(-50%);
+}
+
+
+.paymentoptions{
+	display: block;
+	position: relative;
+	height: auto;
+	min-height: 250px;
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+}
+.radiolabel{
+	
+	height: 40px;
+	text-align: center;
+	font-size: 40px;
+	display: block;
+	margin-left: auto;
+	padding: 0;
+	margin-right: auto;
+	margin-bottom: 20px;
+
+}
+
+
+.paymentradio{
+	height: 40px;
+width: 40px;
+}
+
+.bankdetail{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	display: block;
+	padding: 20px;
+	font-size: 40px;
+}
+.paytmdetail{
+	width: 100%;
+	text-align: center;
+	height: auto;
+	display: none;
+	padding: 20px;
+	font-size: 40px;
+}
+.notediv{
+	display: block;
+	
+
+	position: relative;
+	height: auto;
+	height: 300px;
+	width: 96%;
+	
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-top: 90px;
+	background-color: white;
+	
+	box-shadow: 0px 4px 10px grey;
+
+}
+.note{
+	height: 200px;
+	width: 100%;
+	font-size: 40px;
+	padding: 10px;
+	outline: none;
+	resize: none;
+	border:none;
+}
+
+
+
+.pobtn{
+	height: 80px;
+	width: 80%;
+	position:relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: #4f53c9;
+	color: white;
+border-style: none;
+    border-radius: 5px;
+    font-size: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px grey;
+
+}
+
+.pobtn:hover{
+	background-color: rgb(45,49,145);
+}
+}

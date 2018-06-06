@@ -1,6 +1,7 @@
 <?php 
 
-
+session_start();
+$total=0;
  $con=  mysqli_connect("localhost", "root", "virurohan", "vrindhavan_db");
 
         if(!$con)
@@ -37,10 +38,49 @@
 		</div>
 		
 	
-	<div class="cartdiv">
+	<div class="cartdiv" onclick="opencartmenu()">
 	<img class="carticon" src="images/cart.png">
-	<div class="cartcount"><p class="cartcnt">5</p></div>
+	<div class="cartcount"><p class="cartcnt"><?php echo count($_SESSION['name']) ?></p></div>
 	</div>
+	<div class="cartmenu">
+		<ul class="cartmenuul">
+			<?php 
+				if(count($_SESSION['name'])==0)
+				{
+					?>
+
+					<li>
+						<span class="cmempty">Cart is empty</span>
+					</li>
+					<?php
+				}
+				 for ($i=0; $i< count($_SESSION['name']); $i++) {
+				 	$total=$total+(($_SESSION['price'][$i])*($_SESSION['quantity'][$i]));
+				
+			?>
+			<li>
+				
+				<span class="cmname"><?php echo $_SESSION['name'][$i]; ?></span>
+				<span class="cmid"><?php echo $_SESSION['id'][$i]; ?></span>
+				<span class="cmcolor">Color: <?php echo $_SESSION['color'][$i]; ?></span>
+				<span class="cmsize">Size: <?php echo $_SESSION['size'][$i]; ?></span>
+				<span class="cmquantity">Quantity: <?php echo $_SESSION['quantity'][$i]; ?></span>
+				<span class="cmprice">&#8377;<?php echo $_SESSION['price'][$i]; ?></span>
+				<img class="cmimg" src="upload/<?php echo $_SESSION['file'][$i]; ?>">
+				
+			</li>
+			<?php
+				}
+			?>
+			
+		</ul>
+		<div class="cmfooter">
+				<a href="cart.php">	<button class="cmbtn">Go to Cart</button></a>
+				<span class="cmftotal">Total: &#8377;<?php echo $total; ?></span>
+
+			</div>
+	</div>
+
 	<div class="topnav">
 		<ul class="topnavul">
 			<a href="home.php"><li>  Home</li></a>
@@ -165,22 +205,48 @@
 
 	}
 
-	function openmenu(){
-		var x=document.getElementsByClassName("topnavul")[0];
+function opencartmenu(){
+	var x=document.getElementsByClassName("cartmenuul")[0];
 		var y=document.getElementsByClassName("searchdiv")[0];
+		var z=document.getElementsByClassName("topnavul")[0];
 		x.classList.toggle("open");
 		if(y.classList.contains("open"))
 		{
 			y.classList.toggle("open");
 		}
+		if(z.classList.contains("open"))
+		{
+			z.classList.toggle("open");
+		}
+
+}
+function openmenu(){
+		var x=document.getElementsByClassName("topnavul")[0];
+		var y=document.getElementsByClassName("searchdiv")[0];
+		var z=document.getElementsByClassName("cartmenuul")[0];
+
+		x.classList.toggle("open");
+		if(y.classList.contains("open"))
+		{
+			y.classList.toggle("open");
+		}
+		if(z.classList.contains("open"))
+		{
+			z.classList.toggle("open");
+		}
 	}
 	function opensearch(){
 		var y=document.getElementsByClassName("searchdiv")[0];
 		var x=document.getElementsByClassName("topnavul")[0];
+		var z=document.getElementsByClassName("cartmenuul")[0];
 		y.classList.toggle("open");
 		if(x.classList.contains("open"))
 		{
 			x.classList.toggle("open");
+		}
+		if(z.classList.contains("open"))
+		{
+			z.classList.toggle("open");
 		}
 	}
 

@@ -1,30 +1,37 @@
-
+@media (min-width: 1200px){
 .viewcontainer{
 
 	position: relative;
 	margin-top: 100px;
 	
 	padding: 10px;
-	
+	height: auto;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 	max-width: 1200px;
-	min-height: 100%;
+	min-height: -webkit-fill-available;
 
 }
 .viewimagelist{
 	float: left;
-	width: 15%;
-	padding-left: 2px;
-	height: 500px;
-	
-	margin: 10px;
+    width: 15%;
+    padding: 5px;
+    height: auto;
+    max-height: 800px;
+    margin: 12px;
+    margin-top: 0;
+    background-color: white;
+    overflow-y: auto;
+        box-shadow: 0 2px 10px grey;
+   /* border: 1px solid rgb(45,49,145);*/
 
 }
 
 .imagelistitem{
-	max-height: 200px;
+	max-height: 150px;
+	min-height: 150px;
+	object-fit: cover;
 	width: 100%;
 }
 .imagelistitem:hover{
@@ -38,43 +45,61 @@ min-height: 800px;
 	padding: 10px;
 	width: 50%;
 	position: relative;
-
+	background-color: white;
+	    box-shadow: 0 2px 10px grey;
+	
 }
 
 .viewdetails{
-	position: absolute;
-    top: 50%;
-    left: 87%;
-    transform: translate(-50%,-50%);
+	    padding-top: 50px;
+    position: absolute;
+    top: 10px;
+    left: 83%;
+    width: 30%;
+    min-height: 800px;
+    background-color: white;
+        box-shadow: 0 2px 10px grey;
+    transform: translate(-50%,0%);
 }
 .sharediv{
-	bottom: 0;
+	top: 775px;
 	position: absolute;
-	left: 30%;
-  
+	
+	width: 50%;
 
+	border-top:none;	
+	left: 17%;
+	padding-left: 25%;
+	
 	}
 	.share{
 	display: inline;	
-	float: left;
-	padding-top: 10px;
-	padding-right: 30px;
+	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 42%;
+	transform: translate(-50%,-50%);
 	
 	
 }
 .viewimage{
-	width: 100%;
+	width: 95%;
 	max-height: 90%;
   	position: absolute;
   	left: 50%;
   	top: 50%;
+  	object-fit: cover;
   	transform: translate(-50%,-50%);
  
 }
 
 .viewname{	
-	text-align: center;
-	font-size: 25px;
+	    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    overflow-wrap: break-word;
+    padding: 10px;
 	
 }
 
@@ -133,7 +158,7 @@ hr{
 	font-size: 25px;
 }
 .add{
-	background-color: rgb(45,49,145);
+	background-color: #4f53c9;
 	color: white;
 	margin:20px auto 50px auto;
     display:block;
@@ -143,16 +168,20 @@ hr{
     border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
-    box-shadow: 2px 2px grey;
+    box-shadow: 0px 4px 10px grey;
 }
 .add:hover{
-	background-color: #1d2062;
+	background-color: rgb(45,49,145);
 }
 
 .viewdescription{
 	padding-top: 25px;
-	font-size: 15px;
-	padding-bottom: 25px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    overflow-wrap: break-word;
+    padding-bottom: 25px;
 }
 
 .radio{
@@ -168,14 +197,13 @@ hr{
 	text-align: center;
 	line-height: 25px;
 	vertical-align: middle;
-	background-color: rgba(45,49,145,0.5);
+	background-color: #4f53c9;
 	color: white;
 	font-style: bold;
 	cursor: pointer;
 	font-size: 15px;
 	border-radius: 3px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px 5px 10px 5px;
 }
 
 .radio:checked + .radiolabel{
@@ -183,7 +211,7 @@ hr{
 }
 
 .radiolabel:hover{
-	background-color:rgba(45,49,145,0.75)
+	background-color:rgba(45,49,145,1);
 }
 
 .quantitycounter{
@@ -215,10 +243,556 @@ hr{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	cursor: pointer;
+	font-size: 15px;
 
 }
 
 
 .quantitybtn:hover{
 	background-color: #d9d9d9;
+}
+}
+@media only screen and (max-device-width:1199px) and (min-device-width: 640px){
+
+	.viewcontainer{
+
+	position: relative;
+	margin-top: 100px;
+	
+	padding: 10px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	max-width: 1200px;
+	min-height: -webkit-fill-available;
+
+}
+.viewimagelist{
+	
+	width: 100%;
+	
+	position: relative;
+
+	height: 150px;
+	padding: 5px;
+	margin: 0px;
+	overflow-y: hidden;
+	margin-bottom: 10px;
+
+    
+background-color: white;
+    overflow-x: auto;
+        box-shadow: 0 4px 10px grey;
+}
+
+.imagelistitem{
+	width: auto;
+	max-height: 150px;
+	max-width: 150px;
+	min-width: 150px;
+	padding: 5px;
+	height: 100%;
+	float: left;
+	object-fit: cover;
+}
+.imagelistitem:hover{
+	border:1px solid rgb(230,0,142);
+}
+
+.viewimages{
+	 
+min-height: 400px;
+	overflow:hidden;
+height: -webkit-fill-available;
+padding: 10px;
+background-color: white;
+border:1px solid pink;
+border-bottom:none;
+	max-height: 1200px;
+	width: 100%;
+	position: relative;
+
+        box-shadow: 0 4px 10px grey;
+
+}
+
+.viewdetails{
+padding: 10px;
+	position: relative;
+    /*top: 50%;
+    left: 87%;
+    transform: translate(-50%,-50%);*/
+    background-color: white;
+    margin-top: 20px;
+    	margin-bottom: 10px;
+        box-shadow: 0 4px 10px grey;
+}
+.sharediv{
+	
+        box-shadow: 0 4px 10px grey;
+	position: relative;
+	padding-left: 53%;
+	padding-bottom: 10px;
+  	height: 40px;
+  	margin-top: -25px;
+  	background-color: white;
+  	border:1px solid pink;
+  	border-top:none;
+	}
+	.share{
+		font-size: 20px;
+		vertical-align: middle;
+	display: inline;	
+	text-align: center;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50%,-50%);
+
+	
+	
+}
+.viewimage{
+	/*width: auto;
+	height: auto;*/ 
+	object-fit: fill;
+	max-width: 98%;  
+	max-height: 96%;
+
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%,-50%);
+ 
+}
+
+.viewname{	
+	text-align: center;
+	margin-top: 10px;
+	font-size: 30px;
+	
+}
+
+.viewcontainer > h1,p{
+	margin: 0;
+	font-size: 20px;
+}
+
+hr{
+	visibility: none;
+	position: absolute;
+}
+
+
+.select{
+
+	font-size: 20px;
+	text-decoration: bold;
+	margin-bottom: 10px;
+}
+
+.viewitemcode,.viewsize,.viewcolor,.viewquantity,.viewprice,.viewdescription{
+	text-align: center;
+
+}
+
+
+.viewitemcode{
+	padding-bottom: 15px;
+	font-style: italic;
+	font-size: 20px;
+}
+.viewsize{
+	font-size: 20px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.viewcolor{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+.viewquantity{
+	font-size: 20px;
+	padding-bottom: 15px;
+}
+.viewprice{
+	
+	padding-top: 10px;
+	padding-bottom: 15px: 
+
+}
+.viewprice > p{
+	font-size: 30px;
+}
+.add{
+	background-color: #4f53c9;
+	color: white;
+	margin:20px auto 20px auto;
+    display:block;
+    width: 250px;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+   box-shadow: 0px 4px 10px grey;
+}
+.add:hover{
+	background-color: rgb(45,49,145);
+}
+
+.viewdescription{
+	padding-top: 25px;
+	font-size: 20px;
+	padding-bottom: 25px;
+	padding-left: 10px;
+    padding-right: 10px;
+overflow-wrap: break-word;
+}
+
+.radio{
+	display: none;
+
+}
+
+.radiolabel{
+	display: inline-block;
+	height: 40px;
+	width: auto;
+	padding:0 20px;
+	text-align: center;
+	line-height: 40px;
+	vertical-align: middle;
+	background-color: #4f53c9;
+	color: white;
+	font-style: bold;
+	cursor: pointer;
+	font-size: 20px;
+	border-radius: 3px;
+	margin:10px;
+	min-width: 50px;
+}
+
+.radio:checked + .radiolabel{
+	background-color: rgb(45,49,145);
+}
+
+.radiolabel:hover{
+	background-color:rgba(45,49,145,1)
+}
+
+.quantitycounter{
+	height: 40px;
+	width: 100px;
+	border:1px solid #808080;
+	border-radius: 2px;
+	appearance:none;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	-moz-appearance:textfield;  /*spinner removing for firefox*/
+}
+
+/* Webkit browsers like Safari and Chrome */
+.quantitycounter::-webkit-inner-spin-button,
+.quantitycounter::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantitybtn{
+	background-color: #e7e7e7;
+	border:1px solid #808080;
+	border-radius: 2px;
+	height: 40px;
+	width: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	font-size: 20px;
+
+}
+
+
+.quantitybtn:hover{
+	background-color: #d9d9d9;
+}
+
+}
+@media only screen and (max-device-width: 639px){
+
+.viewcontainer{
+
+	position: relative;
+	margin-top: 190px;
+	
+	padding: 5px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	max-width: 1200px;
+	min-height: -webkit-fill-available;
+
+}
+.viewimagelist{
+	
+	width: 100%;
+	
+	position: relative;
+
+	height: 200px;
+	padding: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
+	overflow-y: hidden;
+	margin-bottom: 20px;
+
+    
+background-color: white;
+    overflow-x: auto;
+        box-shadow: 0 4px 10px grey;
+}
+
+.imagelistitem{
+	width: auto;
+	max-height: 200px;
+	max-width: 200px;
+	min-width: 200px;
+	min-height: 200px;
+	padding: 10px;
+	height: 100%;
+	float: left;
+	object-fit: cover;
+}
+.imagelistitem:hover{
+	border:1px solid rgb(230,0,142);
+}
+
+.viewimages{
+	 
+min-height: 800px;
+	overflow:hidden;
+height: -webkit-fill-available;
+padding: 10px;
+background-color: white;
+border:1px solid pink;
+border-bottom:none;
+	max-height: 1200px;
+	width: 100%;
+	position: relative;
+
+        box-shadow: 0 4px 10px grey;
+
+}
+
+.viewdetails{
+padding: 10px;
+	position: relative;
+    /*top: 50%;
+    left: 87%;
+    transform: translate(-50%,-50%);*/
+    background-color: white;
+    margin-top: 20px;
+    	margin-bottom: 10px;
+        box-shadow: 0 4px 10px grey;
+}
+.sharediv{
+	
+        box-shadow: 0 4px 10px grey;
+	position: relative;
+	padding-left: 53%;
+	padding-bottom: 10px;
+  	height: 60px;
+  	margin-top: -25px;
+  	background-color: white;
+  	border:1px solid pink;
+  	border-top:none;
+	}
+	.share{
+		font-size: 30px;
+		vertical-align: middle;
+	display: inline;	
+	text-align: center;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50%,-50%);
+
+	
+	
+}
+.viewimage{
+	/*width: auto;
+	height: auto;*/ 
+	object-fit: fill;
+	max-width: 100%;  
+	max-height: 96%;
+
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%,-50%);
+ 
+}
+
+.viewname{	
+	text-align: center;
+	margin-top: 20px;
+	font-size: 50px;
+	
+}
+
+.viewcontainer > h1,p{
+	margin: 0;
+	font-size: 30px;
+}
+
+hr{
+	visibility: none;
+	position: absolute;
+}
+
+
+.select{
+
+	font-size: 30px;
+	text-decoration: bold;
+	margin-bottom: 10px;
+}
+
+.viewitemcode,.viewsize,.viewcolor,.viewquantity,.viewprice,.viewdescription{
+	text-align: center;
+
+}
+
+
+.viewitemcode{
+	padding-bottom: 25px;
+	font-style: italic;
+	font-size: 30px;
+}
+.viewsize{
+	font-size: 30px;
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+
+.viewcolor{
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+.viewquantity{
+	font-size: 30px;
+	padding-bottom: 25px;
+}
+.viewprice{
+	
+	padding-top: 40px;
+	padding-bottom: 25px: 
+
+}
+.viewprice > p{
+	font-size: 50px;
+}
+.add{
+	background-color: #4f53c9;
+	color: white;
+	margin:20px auto 50px auto;
+    display:block;
+    width: 800px;
+    height: 100px;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px grey;
+}
+.add:hover{
+	background-color: rgb(45,49,145);
+}
+
+.viewdescription{
+	padding-top: 25px;
+	font-size: 30px;
+	padding-bottom: 25px;
+	padding-left: 10px;
+    padding-right: 10px;
+overflow-wrap: break-word;
+}
+
+.radio{
+	display: none;
+
+}
+
+.radiolabel{
+	display: inline-block;
+	height: 70px;
+	width: auto;
+	padding:0 20px;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	background-color: #4f53c9;
+	color: white;
+	font-style: bold;
+	cursor: pointer;
+	font-size: 30px;
+	border-radius: 3px;
+	margin:10px;
+	min-width: 70px;
+}
+
+.radio:checked + .radiolabel{
+	background-color: rgb(45,49,145);
+}
+
+.radiolabel:hover{
+	background-color:rgba(45,49,145,1)
+}
+
+.quantitycounter{
+	height: 70px;
+	width: 140px;
+	border:1px solid #808080;
+	border-radius: 2px;
+	appearance:none;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	-moz-appearance:textfield;  /*spinner removing for firefox*/
+}
+
+/* Webkit browsers like Safari and Chrome */
+.quantitycounter::-webkit-inner-spin-button,
+.quantitycounter::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantitybtn{
+	background-color: #e7e7e7;
+	border:1px solid #808080;
+	border-radius: 2px;
+	height: 70px;
+	width: 70px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	font-size: 30px;
+
+}
+
+
+.quantitybtn:hover{
+	background-color: #d9d9d9;
+}
+
 }

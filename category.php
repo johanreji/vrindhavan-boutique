@@ -1,4 +1,6 @@
 <?php 
+session_start();
+$total=0;
 if(!isset($_GET['sort']))
 {
 	$val=0;
@@ -38,7 +40,7 @@ $empty=1;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vsarindhavan</title>
+	<title>Vrindhavan</title>
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="category.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
@@ -47,26 +49,68 @@ $empty=1;
 <body>
 <header>
 	<div class="headercontent">
+	<div class="burger" onclick="openmenu()"></div>
+	
 	<img class="logo" src="images/logo.png">
-		
+	<div class="sbtn" onclick="opensearch()">	
+	</div>	
 		<div class="searchdiv">
-		<form method="get" action="search.php">
+		<form  method="get" action="search.php">
 		<input class="searchbar" type="text" name="search" placeholder="What do you want to find?">
 		<button class="searchbtn" type="submit"><img class="searchicon" src="images/search.png"></button>
 		</form>
 		</div>
+		
 	
-	
-	<div class="cartdiv">
+	<div class="cartdiv" onclick="opencartmenu()">
 	<img class="carticon" src="images/cart.png">
-	<div class="cartcount"><p>5</p></div>
+	<div class="cartcount"><p class="cartcnt"><?php echo count($_SESSION['name']) ?></p></div>
 	</div>
+	<div class="cartmenu">
+		<ul class="cartmenuul">
+			<?php 
+				if(count($_SESSION['name'])==0)
+				{
+					?>
+
+					<li>
+						<span class="cmempty">Cart is empty</span>
+					</li>
+					<?php
+				}
+				 for ($i=0; $i< count($_SESSION['name']); $i++) {
+				 	$total=$total+(($_SESSION['price'][$i])*($_SESSION['quantity'][$i]));
+				
+			?>
+			<li>
+				
+				<span class="cmname"><?php echo $_SESSION['name'][$i]; ?></span>
+				<span class="cmid"><?php echo $_SESSION['id'][$i]; ?></span>
+				<span class="cmcolor">Color: <?php echo $_SESSION['color'][$i]; ?></span>
+				<span class="cmsize">Size: <?php echo $_SESSION['size'][$i]; ?></span>
+				<span class="cmquantity">Quantity: <?php echo $_SESSION['quantity'][$i]; ?></span>
+				<span class="cmprice">&#8377;<?php echo $_SESSION['price'][$i]; ?></span>
+				<img class="cmimg" src="upload/<?php echo $_SESSION['file'][$i]; ?>">
+				
+			</li>
+			<?php
+				}
+			?>
+			
+		</ul>
+		<div class="cmfooter">
+				<a href="cart.php">	<button class="cmbtn">Go to Cart</button></a>
+				<span class="cmftotal">Total: &#8377;<?php echo $total; ?></span>
+
+			</div>
+	</div>
+
 	<div class="topnav">
-		<ul>
-			<li><a href="home.php"> Home</a></li>
-			<li><a href="category.php?name=kurthi"> Kurthis</a></li>
-			<li><a href="category.php?name=tops"> Tops</a></li>
-			<li><a href="category.php?name=leggings"> Leggings</a></li>
+		<ul class="topnavul">
+			<a href="home.php"><li>  Home</li></a>
+			<a href="category.php?name=kurthi"><li> Kurthis</li></a>
+			<a href="category.php?name=tops"><li> Tops</li></a>
+			<a href="category.php?name=leggings"><li> Leggings</li></a>
 		</ul>
 	</div>
 	</div>
@@ -202,7 +246,7 @@ $empty=1;
 	</div>
 </div>
 
- <footer>
+<footer>
 	<div class="footercontent">
 		<div class="f1">
 			<img class="shipping" src="images/shipping.png">
@@ -213,30 +257,31 @@ $empty=1;
 		<div class="f2">
 
 			<span class="underline">Contact us</span>
-			<p><br>Tel:848859585<br>support@vrindhavan.com<br></p><p><img class="swhatsapp" src="images/whatsapp.png"> +91 858474584</p>
+			<p>Tel:848859585<br>support@vrindhavan.com<br></p><p><img class="swhatsapp" src="images/whatsapp.png"> +91 858474584</p>
 		</div>
 		<div class="f3">
 			<span class="underline"  >Visit us</span>
-			<p><br>Floor no.3 <br>Lulu mall<br>Edapally,Kochi<br>Mon to Sat 9.30am to 6.30pm</p>
+			<p>Lulu mall<br>Edapally,Kochi<br>Mon to Sat 9.30am to 6.30pm</p>
 		</div>
 		<div class="f4">
 			<span class="underline">Follow us</span>
-			<br><br><a href="#">vrindhavan.com</a>
-			<br><br>
+
+			<a href="#">vrindhavan.com</a>
+			<br>
 			<a href=""><img class="followicon" src="images/facebook.png"></a>
 			<a href=""><img class="followicon" src="images/whatsapp.png"></a>
 
 		</div>
 		<div class="bottomnav">
 			<ul>
-				<li><a href="">About us</a>  | </li>
-				<li><a href="">Terms</a>  | </li>
+				<li><a href="">About us</a></li>  | 
+				<li><a href="">Terms</a></li>  | 
 				<li><a href="">Policies</a></li>
 			</ul>
 			
 		</div>
 		<div class="crdiv">
-			<p>&#169; Vrindhavan.com 2018. All Rights Reserved.</p>
+			<p class="crp">&#169; Vrindhavan.com 2018. All Rights Reserved.</p>
 		</div>
 
 	</div>
@@ -256,6 +301,53 @@ listitup.classList.remove("unactive");
 listitup.classList.add("active");
 listitdwn.classList.remove("unactive");
 listitdwn.classList.add("active");
+
+</script>
+<script type="text/javascript">
+function opencartmenu(){
+	var x=document.getElementsByClassName("cartmenuul")[0];
+		var y=document.getElementsByClassName("searchdiv")[0];
+		var z=document.getElementsByClassName("topnavul")[0];
+		x.classList.toggle("open");
+		if(y.classList.contains("open"))
+		{
+			y.classList.toggle("open");
+		}
+		if(z.classList.contains("open"))
+		{
+			z.classList.toggle("open");
+		}
+
+}
+function openmenu(){
+		var x=document.getElementsByClassName("topnavul")[0];
+		var y=document.getElementsByClassName("searchdiv")[0];
+		var z=document.getElementsByClassName("cartmenuul")[0];
+
+		x.classList.toggle("open");
+		if(y.classList.contains("open"))
+		{
+			y.classList.toggle("open");
+		}
+		if(z.classList.contains("open"))
+		{
+			z.classList.toggle("open");
+		}
+	}
+	function opensearch(){
+		var y=document.getElementsByClassName("searchdiv")[0];
+		var x=document.getElementsByClassName("topnavul")[0];
+		var z=document.getElementsByClassName("cartmenuul")[0];
+		y.classList.toggle("open");
+		if(x.classList.contains("open"))
+		{
+			x.classList.toggle("open");
+		}
+		if(z.classList.contains("open"))
+		{
+			z.classList.toggle("open");
+		}
+	}
 
 </script>
 </html>
