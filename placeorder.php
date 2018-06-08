@@ -30,14 +30,14 @@ $sid = mysqli_insert_id($con);
  	
  	}
  	date_default_timezone_set("Asia/Kolkata"); 
- 	$sql ="INSERT INTO `orders` ( `oid`,`bid`, `sid`, `payment`, `note`, `date`) VALUES ('".$_POST['orderid']."', '$bid', '$sid', '".$_POST['paymentoptions']."', '".$_POST['note']."', '".date('d-m-y h:i:s:a')."')";
+ 	$sql ="INSERT INTO `orders` ( `oid`,`bid`, `sid`, `payment`, `note`, `date`) VALUES ('".$_POST['orderid']."', '$bid', '$sid', '".$_POST['paymentoptions']."', '".$_POST['note']."', CURRENT_TIMESTAMP )";
 	if (!mysqli_query($con,$sql))
 	{	$_SESSION['orderresult']=0;
 	}
 	else
 	{	
 	$oid = mysqli_insert_id($con);
-		
+		// '".date('d-m-y h:i:s:a')."'
  		
  	}
 

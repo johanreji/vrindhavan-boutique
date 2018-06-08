@@ -21,6 +21,7 @@ $total=0;
 	<link rel="stylesheet" type="text/css" href="home.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+	<link rel="icon" href="images/logo.png">
 </head>
 <body>
 <header>

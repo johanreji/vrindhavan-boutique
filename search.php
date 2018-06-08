@@ -43,6 +43,7 @@ $empty=1;
 <head>
 	<title>Vrindhavan</title>
 	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="category.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="footer.css">

@@ -198,11 +198,12 @@ border-style: none;
      
     
     font-size: 25px;
+        height: 25px;
 position: absolute;
     top: 20px;
     left: 180px;
     width: 50%;
-    overflow-x: auto;
+    overflow: auto;
 }
 
 .orcolor{
@@ -374,7 +375,7 @@ border-style: none;
 
 
 
-@media only screen and (max-device-width:1200px) and (min-device-width: 640px){
+@media only screen and (max-width:1200px) and (min-width: 640px){
 .content{
 	min-height: 800px;
 	margin-top: 120px;
@@ -555,8 +556,9 @@ border-style: none;
 	font-size: 30px;
 position: absolute;
     top: 30px;
+        height: 30px;
      width: 50%;
-    overflow-x: auto;
+    overflow: auto;
     left: 200px;
     text-align: left;
 }
@@ -724,7 +726,7 @@ border-style: none;
 }
 
 
-@media only screen and (max-device-width: 639px){
+@media only screen and (max-width: 639px){
 .content{
 	min-height: 800px;
 	margin-top: 200px;
@@ -907,7 +909,8 @@ border-style: none;
 position: absolute;
     top: 50px;
      width: 50%;
-    overflow-x: auto;
+         height: 50px;
+    overflow: auto;
     left: 250px;
     text-align: left;
 }

@@ -8,8 +8,9 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $item['name']; ?></title>
+	<title>Vrindhavan</title>
 	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="orderplaced.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">

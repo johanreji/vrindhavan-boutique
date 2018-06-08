@@ -19,6 +19,7 @@ $total=0;
 	<title>Vrindhavan</title>
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="checkout.css">
+	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 </head>

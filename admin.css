@@ -238,7 +238,7 @@ border-collapse: collapse;
 
 
 }
-@media only screen and (max-device-width: 1000px){
+@media (max-width: 1000px){
 
 *{
 	box-sizing: border-box;

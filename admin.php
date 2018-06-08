@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("location: login.php");
+  exit;
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +17,9 @@
 	</title>
 	<meta http-equiv="Cache-control" content="no-cache">
 	<link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+
 </head>
 <body>
 <header>
@@ -61,7 +76,18 @@
 	</form>
 </div>
 <?php  
-		session_start();
+		  if(isset($_SESSION['code']))
+    {
+      if($_SESSION["code"]==0)
+      {
+        echo "<script> alert(\"Error in changing password\");</script>";
+      }
+      else{
+        echo "<script> alert(\"Password changed\");</script>";
+      }
+      unset($_SESSION["code"]);
+    }
+		
 		if(isset($_SESSION["message"]))
 		{
 			if($_SESSION["message"]==1)
@@ -217,7 +243,7 @@
 
 	<div class="orders">
 	<?php
-		$orders=  mysqli_query($con, "select * from `orders` order by date DESC ");
+		$orders=  mysqli_query($con, "select `oid`, `bid`, `sid`, `payment`, `note`, `date` from `orders` order by date DESC ");
 	?>
 			<span class="title">Orders</span><p>(Scroll left or right)</p>
 
@@ -262,7 +288,7 @@
                 	}
 
                 ?></td>
-                <td><?php 
+                <td><?php  
 
                 $sdet=  mysqli_query($con, "select * from `shippingdetails` WHERE `sid` =".$orow['sid']);
                 	while($srow=  mysqli_fetch_array($sdet))
@@ -279,7 +305,7 @@
                 ?></td>
                 <td><?php echo $orow['payment']; ?></td>
                 <td><?php echo $orow['note']; ?></td>
-                <td><?php echo $orow['date'];?></td>
+                <td><?php echo date("d F Y h:i:s A",strtotime($orow['date']));?></td>
                 <td><?php 
 
                 $orderdet=  mysqli_query($con, "select * from `orderitems` WHERE `oid` =".$orow['oid']);

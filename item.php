@@ -49,6 +49,7 @@ session_cache_limiter('must-revalidate');
 	<title><?php echo $item['name']; ?></title>
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="item.css">
+	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 </head>
@@ -132,7 +133,9 @@ session_cache_limiter('must-revalidate');
 		<div class="viewimagelist">
 
 		<?php
+		
 		$file=explode(',', $item['file']);
+
 		for ($i=0; $i < sizeof($file); $i++) { 
 			
 

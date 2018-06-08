@@ -252,7 +252,7 @@ hr{
 	background-color: #d9d9d9;
 }
 }
-@media only screen and (max-device-width:1199px) and (min-device-width: 640px){
+@media only screen and (max-width:1199px) and (min-width: 640px){
 
 	.viewcontainer{
 
@@ -523,7 +523,7 @@ overflow-wrap: break-word;
 }
 
 }
-@media only screen and (max-device-width: 639px){
+@media only screen and (max-width: 639px){
 
 .viewcontainer{
 

@@ -62,6 +62,7 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<link rel="stylesheet" type="text/css" href="cart.css">
 	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="icon" href="images/logo.png">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
@@ -155,7 +156,7 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 			
 		</ul>
 		<div class="cfooter">
-				<button onclick="redirect(<?php echo $total;?>)" class="cbtn">Check out</button>
+				<button onclick="redirect()" class="cbtn" <?php if($total==0){ echo " disabled ";} ?>>Check out</button>
 				<span class="cftotal">Total: &#8377;<?php echo $total; ?></span>
 
 			</div>
@@ -208,17 +209,11 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 mysqli_close($con);
 ?>
 <script type="text/javascript">
- 
- function redirect(t){
- 	if(t==0)
- 	{
- 		alert("cart is empty");
- 	}
- 	else{
- 		location.href="checkout.php";
- 	}
- }
+function redirect()
+{
 
+	location.href="checkout.php";
+}
 function opencartmenu(){
 	var x=document.getElementsByClassName("cartmenuul")[0];
 		var y=document.getElementsByClassName("searchdiv")[0];

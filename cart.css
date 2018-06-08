@@ -92,7 +92,11 @@ border-style: none;
     box-shadow: 0px 4px 10px grey;
 
 }
+.cbtn:disabled{
+ 	pointer-events:none;
+	background-color: grey;
 
+}
 .cbtn:hover{
 	background-color: rgb(45,49,145);
 }
@@ -102,7 +106,8 @@ position: absolute;
     top: 20px;
     left: 180px;
     width: 50%;
-    overflow-x: auto;
+    height: 25px;
+    overflow: auto;
 }
 
 .ccolor{
@@ -225,7 +230,7 @@ cursor: pointer;
 
 }
 
-@media only screen and (max-device-width:1199px) and (min-device-width: 640px){
+@media only screen and (max-width:1199px) and (min-width: 640px){
 .cartcontent{
 	min-height: 800px;
 	margin-top: 100px;
@@ -320,6 +325,12 @@ border-style: none;
 
 }
 
+.cbtn:disabled{
+ 	pointer-events:none;
+	background-color: grey;
+
+}
+
 .cbtn:hover{
 	background-color: rgb(45,49,145);
 }
@@ -329,7 +340,8 @@ position: absolute;
     top: 30px;
     left: 250px;
     width: 50%;
-    overflow-x: auto;
+    height: 30px;
+    overflow: auto;
 }
 
 .ccolor{
@@ -449,7 +461,7 @@ cursor: pointer;
 }
 
 
-@media only screen and (max-device-width: 639px){
+@media only screen and (max-width: 639px){
 .cartcontent{
 	min-height: 1000px;
 	margin-top: 180px;
@@ -543,6 +555,11 @@ border-style: none;
 
 }
 
+.cbtn:disabled{
+ 	pointer-events:none;
+	background-color: grey;
+
+}
 .cbtn:hover{
 	background-color: rgb(45,49,145);
 }
@@ -552,7 +569,8 @@ position: absolute;
     top: 50px;
     left: 300px;
     width: 50%;
-    overflow-x: auto;
+    height: 50px;
+    overflow: auto;
 }
 
 .ccolor{
