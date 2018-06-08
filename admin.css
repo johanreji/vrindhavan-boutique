@@ -1,0 +1,473 @@
+
+
+@media (min-width: 999px){
+
+*{
+	box-sizing: border-box;
+	
+}
+
+
+html,body{
+	min-height: 100%; 
+	width: 100%;
+    
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+	background-image: url(images/bg.png);
+	background-repeat: repeat;
+	
+	
+	font-family: 'Roboto', sans-serif;
+}
+
+header span{
+	    display: block;
+    background-color: teal;
+    font-size: 30px;
+    color: white;
+	text-align: center;
+	width: 100%;
+
+}
+.nav{
+	background-color: teal;
+	color: black;
+	font-size: 15px;
+	height: 50px;
+	border:1px solid white;
+
+}
+header ul a{
+	text-decoration: none;
+	color: black;
+
+}
+.nav ul{
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+	position: relative;
+
+
+}
+
+.nav ul li{
+	display: inline;
+	position: absolute;
+	top: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	background-color: white;
+
+}
+.f{
+left: 10px;
+}
+.s{
+	left: 50%;
+	transform: translateX(-50%);
+}
+.t{
+	right: 10px;
+}
+
+.addfield,.addslidefield,.addcardfield {
+	margin-top: 20px;
+	padding:20px;
+	width: 100%;
+	height: auto;
+	background-color:white;
+	font-size: 30px;
+
+}
+
+.title{
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+
+}
+
+.add form label{
+	font-size: 15px;
+    padding-top: 5px;
+    display: inline-block;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    position: relative;
+    
+    text-align: right;
+    width: 15%;
+}
+.addfield form p,.addslidefield form p{
+		width: 80%;
+	right: 0;
+	float: right;
+	text-align: left;
+	font-size: 15px;
+	margin-top: 0px;
+	display: block;
+}
+.addfield form input,.addfield form select,.addslidefield form input,.addcardfield form input{
+	width: 70%;
+	
+	
+	border: 1px solid grey;
+	padding: 5px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10%;
+	font-size: 15px;
+	
+
+
+}
+.delslidefield{
+	height: auto;
+	min-height: 300px;
+	position: relative;
+}
+
+
+
+.slideimg{
+	height: 150px;
+	object-fit: cover;
+	width: 150px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.slideitem{
+	
+	margin:0;
+	display: inline-block;
+	position: relative;
+	width: 170px;
+	height: 210px;
+	
+}
+.sbtn{
+	
+	background-color: teal;
+	color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	height: 30px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	width: 150px;
+	border :none;
+
+	
+}
+.btn{
+	margin-top: 10px;
+	background-color: teal;
+	color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	height: 30px;
+	width: 150px;
+	border :none;
+
+	
+}
+
+.dbtn{
+	margin:0;
+	background-color: teal;
+	color: white;
+	display: block;
+
+	font-size: 20px;
+	height: 30px;
+	width: 100px;
+	border :none;
+
+	
+}
+.iimg{
+	height: 100px;
+	width: 100px;
+	object-fit: cover;
+	display: inline-block;
+}
+
+.items table,.orders table{
+border-collapse: collapse;
+    border-spacing: 0;
+    min-width: 1200px;
+    width: 100%;
+    border: 1px solid grey;
+    font-size: 15px;
+    margin: 10px;
+}
+.items table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+.orders table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+.items th, .items td,.orders th,.orders td{
+    text-align: left;
+    padding: 5px;
+}
+.items,.orders{
+	overflow-x: scroll;
+	background-color: white;
+	margin-top: 20px;
+	display: none;
+}
+
+
+}
+@media only screen and (max-device-width: 1000px){
+
+*{
+	box-sizing: border-box;
+	
+}
+
+
+html,body{
+	min-height: 100%; 
+	width: 100%;
+    
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+	background-image: url(images/bg.png);
+	background-repeat: repeat;
+	
+	
+	font-family: 'Roboto', sans-serif;
+}
+
+header span{
+	    display: block;
+    background-color: teal;
+    font-size: 50px;
+    color: white;
+	text-align: center;
+	width: 100%;
+
+}
+.nav{
+	background-color: teal;
+	color: black;
+	font-size: 30px;
+	height: 80px;
+	border:1px solid white;
+
+}
+header ul a{
+	text-decoration: none;
+	color: black;
+
+}
+.nav ul{
+	list-style: none;
+	padding: 15px;
+	margin: 0;
+	position: relative;
+
+
+}
+
+.nav ul li{
+	display: inline;
+	position: absolute;
+	top: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: white;
+
+}
+.f{
+left: 10px;
+}
+.s{
+	left: 50%;
+	transform: translateX(-50%);
+}
+.t{
+	right: 10px;
+}
+
+.addfield,.addslidefield,.addcardfield {
+	margin-top: 20px;
+	padding:20px;
+	width: 100%;
+	height: auto;
+	background-color:white;
+	font-size: 30px;
+
+}
+
+.title{
+	font-size: 40px;
+	display: block;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+
+}
+
+.add form label{
+	font-size: 30px;
+    padding-top: 15px;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    width: 160px;
+}
+
+.addfield form p,.addslidefield form p{
+		width: 80%;
+	right: 0;
+	float: right;
+	text-align: left;
+	font-size: 25px;
+	margin-top: 0px;
+	display: block;
+}
+.addfield form input,.addfield form select,.addslidefield form input,.addcardfield form input{
+	width: 80%;
+	right: 0;
+	
+	border: 1px solid grey;
+	padding: 10px;
+	font-size: 30px;
+
+
+}
+.delslidefield{
+	height: auto;
+	min-height: 300px;
+	position: relative;
+}
+
+
+
+.slideimg{
+	height: 200px;
+	object-fit: cover;
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.slideitem{
+	
+	margin:0;
+	display: inline-block;
+	position: relative;
+	width: 220px;
+	height: 300px;
+	
+}
+.sbtn{
+	
+	background-color: teal;
+	color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+	height: 50px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	width: 200px;
+	border :none;
+
+	
+}
+.btn{
+	margin-top: 40px;
+	background-color: teal;
+	color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+	height: 50px;
+	width: 300px;
+	border :none;
+
+	
+}
+
+.dbtn{
+	margin:0;
+	background-color: teal;
+	color: white;
+	display: block;
+
+	font-size: 20px;
+	height: 40px;
+	width: 100px;
+	border :none;
+
+	
+}
+.iimg{
+	height: 99px;
+	display: inline-block;
+	width: 99px;
+	object-fit: cover;
+	
+}
+.inline{
+	display: inline-flex;
+}
+.items table,.orders table{
+border-collapse: collapse;
+    border-spacing: 0;
+    min-width: 1200px;
+    width: 100%;
+    border: 1px solid grey;
+    font-size: 25px;
+    margin: 10px;
+}
+.items table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+.orders table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+.items th, .items td,.orders th,.orders td{
+    text-align: left;
+    padding: 8px;
+}
+.items,.orders{
+	overflow-x: scroll;
+	background-color: white;
+	margin-top: 20px;
+	display: none;
+}
+
+}

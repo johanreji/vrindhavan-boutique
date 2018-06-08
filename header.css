@@ -207,10 +207,11 @@ line-height: 25px;
 
 }
 .cmempty{
-	font-size: 30px;
+	font-size: 20px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	color: grey;
 	transform: translate(-50%,-50%);
 }
 .cmfooter{
@@ -248,6 +249,9 @@ border-style: none;
 	font-size: 25px;
 position: absolute;
     top: 20px;
+    width: 45%;
+    overflow:auto;
+    text-align: left;
     left: 140px;
 }
 
@@ -634,6 +638,9 @@ border-style: none;
 position: absolute;
     top: 30px;
     left: 160px;
+    width: 60%;
+    text-align: left;
+    overflow-x: auto;
 }
 
 .cmcolor{

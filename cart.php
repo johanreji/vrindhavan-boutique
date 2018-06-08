@@ -107,7 +107,9 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 					?>
 
 					<li>
+						<img src='images/excla.png' class='infopic'>
 						<span class="cempty">Cart is empty</span>
+						<a href="home.php"><button class="contbtn" >Continue shopping</button></a>
 					</li>
 					<?php
 				}
@@ -153,7 +155,7 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 			
 		</ul>
 		<div class="cfooter">
-				<a href="checkout.php">	<button class="cbtn">Check out</button></a>
+				<button onclick="redirect(<?php echo $total;?>)" class="cbtn">Check out</button>
 				<span class="cftotal">Total: &#8377;<?php echo $total; ?></span>
 
 			</div>
@@ -188,9 +190,9 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 		</div>
 		<div class="bottomnav">
 			<ul>
-				<li><a href="">About us</a></li>  | 
-				<li><a href="">Terms</a></li>  | 
-				<li><a href="">Policies</a></li>
+				<li><a href="terms.php#aboutus">About us</a></li>  | 
+				<li><a href="terms.php#terms">Terms</a></li>  | 
+				<li><a href="terms.php#policies">Policies</a></li>
 			</ul>
 			
 		</div>
@@ -206,7 +208,16 @@ for ($j=$_POST['itemnumber']; $j <$c ; $j++) {
 mysqli_close($con);
 ?>
 <script type="text/javascript">
-
+ 
+ function redirect(t){
+ 	if(t==0)
+ 	{
+ 		alert("cart is empty");
+ 	}
+ 	else{
+ 		location.href="checkout.php";
+ 	}
+ }
 
 function opencartmenu(){
 	var x=document.getElementsByClassName("cartmenuul")[0];

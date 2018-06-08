@@ -33,7 +33,7 @@
 .card{
 	
 	height: 500px;
-	width: 30%;
+	width: 31%;
 	background-color: #f2f2f2;
 	border:1px solid #e6e6e6;
 margin: 10px;
@@ -41,7 +41,7 @@ margin: 10px;
 position: relative;
 
 	overflow: hidden;
-	box-shadow: none;
+	box-shadow: 0px 4px 10px grey;
 	transition: box-shadow;
 	transition-duration: 0.2s;
 
@@ -57,6 +57,15 @@ position: relative;
 	font-size: 50px;
 }
 
+.infopic{
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%,-50%);
+	
+	height: 80px;
+	width: 80px;
+}
 
 .cardimg{
 	object-fit: cover;
@@ -94,13 +103,13 @@ a{
 }
 .card:hover{
 	
-	box-shadow: 0 0 10px grey;
+	box-shadow: 0 0 0 grey;
 }
 .pagination{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	right: 5%;
+	right: 2%;
 }
 
 .pagination ul li{
@@ -205,8 +214,12 @@ padding: 0;
 position: relative;
 
 	overflow: hidden;
-	box-shadow: 0 0 10px grey;
+	box-shadow: 0px 4px 10px grey;
 	
+}
+
+.card:hover{
+	box-shadow: none;
 }
 
 .empty{
@@ -217,7 +230,15 @@ position: relative;
 	color: grey;
 	font-size: 30px;
 }
-
+.infopic{
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%,-50%);
+	
+	height: 60px;
+	width: 60px;
+}
 
 .cardimg{
 	object-fit: cover;
@@ -362,8 +383,12 @@ padding: 0;
 position: relative;
 
 	overflow: hidden;
-	box-shadow: 0 0 10px grey;
+	box-shadow: 0px 4px 10px grey;
 	
+}
+
+.card:hover{
+	box-shadow: 0 0 0 grey;
 }
 
 .empty{
@@ -375,7 +400,15 @@ position: relative;
 	font-size: 50px;
 }
 
-
+.infopic{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%,-50%);
+	
+	height: 60px;
+	width: 60px;
+}
 .cardimg{
 	object-fit: cover;
 	width: 100%;

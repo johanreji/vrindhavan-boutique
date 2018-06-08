@@ -223,6 +223,7 @@ $empty=1;
              }
              if($empty)
              {
+             	echo "<img src='images/excla.png' class='infopic'>";
              	echo "<span class='empty'>No items found :(</span>";
              }
               ?>
@@ -274,9 +275,9 @@ $empty=1;
 		</div>
 		<div class="bottomnav">
 			<ul>
-				<li><a href="">About us</a></li>  | 
-				<li><a href="">Terms</a></li>  | 
-				<li><a href="">Policies</a></li>
+				<li><a href="terms.php#aboutus">About us</a></li>  | 
+				<li><a href="terms.php#terms">Terms</a></li>  | 
+				<li><a href="terms.php#policies">Policies</a></li>
 			</ul>
 			
 		</div>

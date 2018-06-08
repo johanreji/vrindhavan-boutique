@@ -57,9 +57,13 @@ session_start();
 	if(isset($_SESSION['orderresult']))
 	{
 		if ($_SESSION['orderresult']==1) {
+
+			echo "<img src='images/success.png' class='infopic'>";
 			echo "<span class='message'>Your order has been successfully placed</span>";
+			echo "<span class='id'>Please note your order id : ".$_SESSION['oid']."</span>";
 		}
 		else {
+			echo "<img src='images/excla.png' class='infopic'>";
 			echo "<span class='message'>Your order failed</span>";
 		}
 	}
@@ -95,9 +99,9 @@ session_start();
 		</div>
 		<div class="bottomnav">
 			<ul>
-				<li><a href="">About us</a></li>  | 
-				<li><a href="">Terms</a></li>  | 
-				<li><a href="">Policies</a></li>
+				<li><a href="terms.php#aboutus">About us</a></li>  | 
+				<li><a href="terms.php#terms">Terms</a></li>  | 
+				<li><a href="terms.php#policies">Policies</a></li>
 			</ul>
 			
 		</div>
@@ -121,10 +125,7 @@ function openmenu(){
 		{
 			y.classList.toggle("open");
 		}
-		if(z.classList.contains("open"))
-		{
-			z.classList.toggle("open");
-		}
+		
 	}
 	function opensearch(){
 		var y=document.getElementsByClassName("searchdiv")[0];
@@ -135,10 +136,7 @@ function openmenu(){
 		{
 			x.classList.toggle("open");
 		}
-		if(z.classList.contains("open"))
-		{
-			z.classList.toggle("open");
-		}
+		
 	}
 </script>
 </html>

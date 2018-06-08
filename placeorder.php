@@ -27,10 +27,10 @@ $bid = mysqli_insert_id($con);
 	{	
 $sid = mysqli_insert_id($con);
 	
- 		
+ 	
  	}
-
- 	$sql ="INSERT INTO `orders` ( `oid`,`bid`, `sid`, `payment`, `note`, `date`) VALUES ('".$_POST['orderid']."', '$bid', '$sid', '".$_POST['paymentoptions']."', '".$_POST['note']."', '".date("Y-m-d")."')";
+ 	date_default_timezone_set("Asia/Kolkata"); 
+ 	$sql ="INSERT INTO `orders` ( `oid`,`bid`, `sid`, `payment`, `note`, `date`) VALUES ('".$_POST['orderid']."', '$bid', '$sid', '".$_POST['paymentoptions']."', '".$_POST['note']."', '".date('d-m-y h:i:s:a')."')";
 	if (!mysqli_query($con,$sql))
 	{	$_SESSION['orderresult']=0;
 	}
@@ -44,7 +44,7 @@ $sid = mysqli_insert_id($con);
  	for ($i=0; $i< count($_SESSION['name']); $i++) {
 
 
- 		$sql="INSERT INTO `orderitems` ( `oid`, `iname`, `icode`, `isize`, `icolor`, `iquantity`) VALUES ( '".$_POST['orderid']."', '".$_SESSION['name'][$i]."', '".$_SESSION['id'][$i]."', '".$_SESSION['size'][$i]."', '".$_SESSION['color'][$i]."', '".$_SESSION['quantity'][$i]."')";
+ 		$sql="INSERT INTO `orderitems` ( `oid`, `iname`, `icode`, `isize`, `icolor`, `iquantity`,`iprice`) VALUES ( '".$_POST['orderid']."', '".$_SESSION['name'][$i]."', '".$_SESSION['id'][$i]."', '".$_SESSION['size'][$i]."', '".$_SESSION['color'][$i]."', '".$_SESSION['quantity'][$i]."', '".$_SESSION['price'][$i]."')";
 
  		if (!mysqli_query($con,$sql))
 	{	$_SESSION['orderresult']=0;
@@ -52,7 +52,7 @@ $sid = mysqli_insert_id($con);
 	
 
  	}
-
+ 	$_SESSION['oid']=$_POST['orderid'];
  	unset($_SESSION['name']);
  	unset($_SESSION['id']);
  	unset($_SESSION['size']);

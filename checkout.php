@@ -234,9 +234,9 @@ $total=0;
 		</div>
 		<div class="bottomnav">
 			<ul>
-				<li><a href="">About us</a></li>  | 
-				<li><a href="">Terms</a></li>  | 
-				<li><a href="">Policies</a></li>
+				<li><a href="terms.php#aboutus">About us</a></li>  | 
+				<li><a href="terms.php#terms">Terms</a></li>  | 
+				<li><a href="terms.php#policies">Policies</a></li>
 			</ul>
 			
 		</div>
